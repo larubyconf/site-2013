@@ -1,0 +1,4 @@
+larc - LA Ruby Conference 2013
+Started on Rails 3.2.7
+
+08/05/2012 - New site implementation from scratch.
