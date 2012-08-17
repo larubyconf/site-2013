@@ -18,17 +18,22 @@
 
 
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="/") LA Ruby Conf 2013
-          .container.nav-collapse
-            %ul.nav
-              %li= link_to "Videos", "main/videos"
+    .container
+      %a.brand(href="/")
+        %title
+          LA Ruby Conf 2013
+      .navbar
+        .navbar-inner
+          .container
+            %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .container.nav-collapse
+              %ul.nav
+                %li= link_to raw("<i class='icon-home icon-white'></i>Home"), root_path()
+                %li= link_to "Call for Proposals", "#"
+                %li= link_to "Videos", "/main/videos"
 
     .container
 
