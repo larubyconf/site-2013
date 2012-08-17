@@ -1,7 +1,10 @@
+body {
+    background: url(/assets/seamless_white_background_texture.jpg) repeat;
+}
 .brand {
     width: 100%;
     height: 177px;
-    background: url(/assets/larubyconf-logo.jpg) no-repeat center;
+    background: url(/assets/larubyconf-logo.png) no-repeat center;
     display: block;
     text-align: center;
     margin-left: auto;
@@ -12,3 +15,45 @@
 .brand title {
     display: none;
 }
+
+.navbar-inner {
+  background-color: #dedede; /* fallback color, place your own */
+
+  /* Gradients for modern browsers, replace as you see fit */
+  background-image: -moz-linear-gradient(top, #dedede, white);
+  background-image: -ms-linear-gradient(top, #dedede, white);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dedede), to(white));
+  background-image: -webkit-linear-gradient(top, #dedede, white);
+  background-image: -o-linear-gradient(top, #dedede, white);
+  background-image: linear-gradient(top, #dedede, white);
+  background-repeat: repeat-x;
+
+  /* IE8-9 gradient filter */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='white', GradientType=0);
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .brand {
+        background-size: 100px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    .brand {
+        background-size: 300px;
+        margin-top: 10px;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .brand {
+        background-size: 405px;
+        margin-top: 10px;
+    }
+ }
+
+/* Large desktop */
+@media (min-width: 1200px) { ... }
