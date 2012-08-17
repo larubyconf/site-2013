@@ -1,6 +1,27 @@
 .well
-  .announcement
-    %h1
-      February 2013
-    %h2
-      more information coming soon...
+  #myCarousel.carousel.slide
+    .carousel-inner
+      .active.item.hp-carousel
+        .announcement
+          %h1
+            February 2013
+          %h2
+            more information coming soon...
+      .item.hp-carousel
+        =image_tag("photos/2009/kelli-cadillac-side-view.jpg")
+        .caption
+          a beautifully restored 1957 Cadillac
+      .item.hp-carousel
+        =image_tag("photos/2009/flying-robots.jpg")
+        .caption
+          Ron and Damon Evans presenting their flying robot - Ruby & Arduino
+      .item.hp-carousel
+        =image_tag("http://placehold.it/600x450")
+        .caption
+          a gorgeous place holder image from placehold.it
+      .item.hp-carousel
+        =image_tag("photos/2009/chrysler-pt.jpg")
+    %a{:class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}
+      <
+    %a{:class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}
+      >

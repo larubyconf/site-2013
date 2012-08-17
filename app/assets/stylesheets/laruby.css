@@ -35,13 +35,34 @@ body {
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .brand {
-        background-size: 220px;
+        background-size: 200px;
         height: 130px;
         margin-top: -10px;
     }
     .announcement h1 {
-        font-size: 3em;
+        font-size: 3.5em;
+        padding: 2px;
     }
+
+    .announcement h2 {
+        font-size: 1.5em;
+        padding: 2px;
+    }
+}
+
+.hp-carousel {
+    height: 480px;
+    font-size: 1.4em;
+}
+
+.hp-carousel img {
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.hp-carousel .caption {
+    text-align: center;
 }
 
 /* Landscape phone to portrait tablet */
@@ -49,6 +70,15 @@ body {
     .brand {
         background-size: 300px;
         margin-top: 10px;
+    }
+    .announcement h1 {
+        font-size: 5.5em;
+        padding: 10px;
+    }
+
+    .announcement h2 {
+        font-size: 2em;
+        padding: 10px;
     }
 }
 
