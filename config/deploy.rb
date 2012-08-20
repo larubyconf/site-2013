@@ -28,7 +28,7 @@ set :keep_release, 5
 
 set :branch, 'master'
 
-set :user, 'deploy'
+set :user, 'laruby'
 set :use_sudo, false
 
 set :home_dir, "/home/#{user}/#{application}"
