@@ -19,9 +19,22 @@
 
   %body
     .container
-      %a.brand(href="/")
-        %title
-          LA Ruby Conf 2013
+      %header
+        .row
+          .span3
+            .well.center.blue
+              The fifth annual Conference will be in
+              %h2 February 2013
+              exact dates to be determined.
+          .span6
+            %a.brand(href="/")
+              %title
+                LA Ruby Conf 2013
+          .span3
+            .well.center.blue
+              Call for Proposals opening
+              %h2
+                October 1, 2012
       .navbar
         .navbar-inner
           .container
@@ -32,17 +45,36 @@
             .container.nav-collapse
               %ul.nav.custom
                 %li= link_to raw("<i class='icon-home icon-white'></i>Home"), root_path()
-                %li= link_to "Call for Proposals", "#"
-                %li= link_to "Videos", "/main/videos"
+                %li
+                  =link_to image_tag("blue-ruby.png"), "#"
+                %li
+                  = link_to "Speakers", "#"
+                %li
+                  = link_to "Schedule", "#"
+                %li
+                  = link_to "Sponsors", "#"
+                %li 
+                  = link_to "Training", "#"
+                %li
+                  =link_to image_tag("blue-ruby.png"), "#"
+                %li
+                  = link_to "Venue", "#"
+                %li
+                  = link_to "Travel", "#"
+                %li
+                  =link_to image_tag("blue-ruby.png"), "#"
+                %li
+                  = link_to "Community Board", "#"
+                %li
+                  = link_to "Call for Proposals", "#"
+                %li
+                  = link_to "Videos from the Past", "/main/videos"
 
     .container
 
       .content
-        .row
-          .span12
-            = yield
-      %footer
-        %p.pull-right &copy; TechConf, LLC 2012
+        = yield
+      = render :partial => 'shared/footer'
     /
       Javascripts
       \==================================================

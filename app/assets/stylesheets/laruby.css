@@ -22,6 +22,14 @@ body {
     display: none;
 }
 
+.well.blue{
+    border: #0e2647 2px solid;
+}
+
+header .well.blue {
+    height: 100px;
+}
+
 .narrow {
     padding-left: 100px;
     padding-right: 100px;
