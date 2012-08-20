@@ -1,5 +1,5 @@
-role :web, "stage.larubyconf.com"
-role :app, "stage.larubyconf.com"
-role :db,  "stage.larubyconf.com"
+role :web, "beta.larubyconf.com"
+role :app, "beta.larubyconf.com"
+role :db,  "beta.larubyconf.com"
 
 set :rails_env, "staging"

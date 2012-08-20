@@ -18,7 +18,7 @@ require 'capistrano/ext/multistage'
 set :rvm_ruby_string, "1.9.3"
 set :rvm_type, :user
 
-set :application, "larubyconf"
+set :application, "site"
 set :repository,  "git@github.com:larubyconf/site-2013.git"
 
 set :scm, :git
