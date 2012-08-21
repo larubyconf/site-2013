@@ -51,6 +51,9 @@ header .well.blue {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='white', GradientType=0);
 }
 
+.navbar .nav > li > a {
+  text-shadow: none;
+}
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .brand {
