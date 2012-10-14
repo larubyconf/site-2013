@@ -26,6 +26,10 @@ gem "omniauth-openid"
 gem "omniauth-linkedin"
 gem "omniauth-github"
 
+gem 'paperclip', "~> 3"
+gem 'aws-s3'
+gem 'aws-sdk'
+
 gem "rails_admin"
 
 group :development, :test do
@@ -66,7 +70,5 @@ gem "mongrel", ">=1.2.0.pre2",  :group => :development
 
 gem "mocha", :group => :test
 gem "action_args"
-
-gem "will_paginate", "3.0.3"
 
 gem "errplane"

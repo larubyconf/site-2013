@@ -1,0 +1,9 @@
+.row
+  .span12
+    -Sponsor::LEVELS.each do |level|
+      -sponsors = Sponsor.level(level)
+      -unless sponsors.count ==0
+        .well
+          %legend
+            =display_level level
+          =render :partial => 'sponsor', :collection => Sponsor.level(level)

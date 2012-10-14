@@ -1,0 +1,6 @@
+- flash.each do |type, message|
+  -unless message.empty?
+    .alert.fade.in{ "data-alert" => "alert", :class => tb_type(type) }
+      %a.close{ "data-dismiss" => "alert", :href => "#" } &#215;
+      %p
+        = raw(message)
