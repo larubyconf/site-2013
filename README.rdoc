@@ -2,3 +2,4 @@ larc - LA Ruby Conference 2013
 Started on Rails 3.2.7
 
 08/05/2012 - New site implementation from scratch.
+10/14/2012 - working on site again, updated to rails 3.2.8
