@@ -1,0 +1,9 @@
+.row
+  .span3
+    &nbsp;
+  .span6
+    .well
+      .sponsor-logo
+        =image_tag(@sponsor.logo.url(:full_size))
+      .sponsor-message
+        =@sponsor.message

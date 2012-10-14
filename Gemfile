@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "3.2.7"
+gem "rails", "3.2.8"
 gem "haml"
 gem "haml-rails"
 gem "sass"
@@ -25,6 +25,10 @@ gem "omniauth-twitter"
 gem "omniauth-openid"
 gem "omniauth-linkedin"
 gem "omniauth-github"
+
+gem 'paperclip', "~> 3"
+gem 'aws-s3'
+gem 'aws-sdk'
 
 gem "rails_admin"
 
@@ -66,7 +70,5 @@ gem "mongrel", ">=1.2.0.pre2",  :group => :development
 
 gem "mocha", :group => :test
 gem "action_args"
-
-gem "will_paginate", "3.0.3"
 
 gem "errplane"

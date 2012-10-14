@@ -1,0 +1,10 @@
+.sponsor-list
+  .sponsor
+    .logo
+      -unless sponsor.logo_file_name.nil?
+        =sponsor_link sponsor, :medium
+      -else
+        =sponsor.name
+    .message
+      =sponsor.message
+  .clear
