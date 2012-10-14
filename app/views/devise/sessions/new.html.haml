@@ -1,0 +1,24 @@
+.row
+  .span3
+    &nbsp;
+  .span6
+    .well
+      %legend
+        Sign in
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name), :class => 'horizontal-form') do |f|
+        .fieldset
+          .control-group
+            =f.label :email, :class => 'control-label'
+            .controls
+              =f.email_field :email
+          .control-group
+            =f.label :password, :class => 'control-label'
+            .controls
+              =f.password_field :password
+          .control-group
+            -if devise_mapping.rememberable?
+              =f.check_box :remember_me
+              =f.label :remember_me, :class => 'control-label'
+          .control-group
+            =f.submit "Sign in"
+      = render :partial => 'devise/shared/links'

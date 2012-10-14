@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805135019) do
+ActiveRecord::Schema.define(:version => 20121014232937) do
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -19,12 +19,28 @@ ActiveRecord::Schema.define(:version => 20120805135019) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 8
+    t.integer  "year",       :limit => 5
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "name"
+    t.string   "level"
+    t.datetime "sponsored_at"
+    t.integer  "primary_contact_id"
+    t.text     "message"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.text     "note"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "url"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -39,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20120805135019) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "role"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

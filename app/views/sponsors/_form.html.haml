@@ -1,0 +1,24 @@
+=form_for @sponsor, :html => { :class => 'horizontal-form', :multipart => true } do |f|
+  %legend
+    .pull-right
+      %button.btn.btn-primary{:type => 'submit'}
+        Save Changes
+      =link_to 'Cancel', root_path, :class => 'btn'
+    Sponsor Information
+  .fieldset
+    .control-group
+      =f.label :name, :class => 'control-label'
+      .controls
+        =f.text_field :name
+    .control-group
+      =f.label :logo, :class => 'control-label'
+      .controls
+        =f.file_field :logo
+    .control-group
+      =f.label :url, :class => 'control-label'
+      .controls
+        =f.text_field :url
+    .control-group
+      =f.label :message, :class => 'control-label'
+      .controls
+        =f.text_area :message, :rows => 5
