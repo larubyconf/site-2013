@@ -33,7 +33,7 @@ set :use_sudo, false
 set :home_dir, "/home/#{user}/#{application}"
 
 set :deploy_to, "#{home_dir}"
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :scm_verbose, true
 set :copy_exclude, [".git", ".DS_Store", ".gitignore", ".gitmodules"]
 
