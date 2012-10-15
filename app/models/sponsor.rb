@@ -13,8 +13,9 @@ class Sponsor < ActiveRecord::Base
   :path => "/:class/:id-:style.:extension",
   :default_url => "http://placehold.it/150x50",
   :styles => {
-    :medium => '150x50',
-    :full_size => '600x200'
+    :small => '50x50',
+    :medium => '150x150',
+    :full_size => '600x600'
   }
 
   ##
