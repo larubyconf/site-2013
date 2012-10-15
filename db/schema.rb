@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121014232937) do
+ActiveRecord::Schema.define(:version => 20121015003335) do
+
+  create_table "proposals", :force => true do |t|
+    t.string   "title"
+    t.text     "abstract"
+    t.string   "target_audience"
+    t.datetime "submitted_at"
+    t.string   "status"
+    t.integer  "user_id"
+    t.boolean  "removed",         :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

@@ -11,30 +11,30 @@
           %li
             =link_to image_tag("blue-ruby.png"), "#"
           %li
-            = link_to "Speakers", "#"
+            = link_to "Speakers", speakers_path 
           %li
-            = link_to "Schedule", "#"
+            = link_to "Schedule", schedule_path
           %li
             = link_to "Sponsors", sponsors_path
           %li 
-            = link_to "Training", "#"
+            = link_to "Workshops", workshops_path
           %li
             =link_to image_tag("blue-ruby.png"), "#"
           %li
-            = link_to "Venue", "#"
+            = link_to "Venue", venue_path
           %li
-            = link_to "Travel", "#"
+            = link_to "Travel", travel_path
           %li
             =link_to image_tag("blue-ruby.png"), "#"
           %li
-            = link_to "Call for Proposals", "#"
+            = link_to "Call for Proposals", proposals_path
           %li
             = link_to "Videos from the Past", "/main/videos"
           %li
             =link_to image_tag("blue-ruby.png"), "#"
           -if current_user
             %li
-              =link_to current_user.email, my_account_path
+              =link_to 'My Account', my_account_path
             %li
               =link_to 'Sign Out', destroy_user_session_path, :method => 'delete'
           -else

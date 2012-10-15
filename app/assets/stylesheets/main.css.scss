@@ -47,7 +47,7 @@
     }
     .message {
       float: left;
-      width: 880px;
+      width: 680px;
       margin-bottom: 10px;
     }
   }
@@ -55,4 +55,15 @@
 
 .clear {
        clear: both;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 4em;
+  line-height: 1.5em;
+}
+
+.introduction {
+  font-size: 1.4em;
+  line-height: 1.2em;
 }
