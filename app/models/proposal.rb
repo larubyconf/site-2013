@@ -1,3 +1,9 @@
 class Proposal < ActiveRecord::Base
-  # attr_accessible :title, :body
+  belongs_to :user
+
+  scope :accepted, where(:status => 'accepted')
+
+  def name
+    self.title
+  end
 end
