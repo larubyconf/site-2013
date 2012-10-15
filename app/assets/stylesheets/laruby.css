@@ -92,6 +92,10 @@ header .well.blue {
         font-size: 1.5em;
         padding: 2px;
     }
+
+    .annoucement h3 {
+        font-size: 18px;
+        line-height: 1.5em;
 }
 
 .hp-carousel {
