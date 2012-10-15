@@ -20,13 +20,12 @@
           <
         %a{:class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}
           >
+    .well
+      %legend
+        News & Announcements
+      =render :partial => "news_item", :collection => @news_items
   .span3
     .well
       %legend
         Registration
       Sign up now to be notified when tickets go on sale.
-  .span6
-    .well
-      %legend
-        News & Announcments
-      =render :partial => "news_item", :collection => @news_items
