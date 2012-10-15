@@ -26,6 +26,9 @@
           %li
             = link_to "Videos from the Past", "/main/videos"
         %ul.nav.custom.pull-right
+          -if current_user && current_user.admin?
+            %li.divider
+              =link_to 'Admin', admin_path
           -if current_user
             %li
               =link_to current_user.email, my_account_path

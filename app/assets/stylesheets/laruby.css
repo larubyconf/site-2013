@@ -98,21 +98,6 @@ header .well.blue {
         line-height: 1.5em;
 }
 
-.hp-carousel {
-    height: 480px;
-    font-size: 1.4em;
-}
-
-.hp-carousel img {
-    margin: auto;
-    border-radius: 10px;
-    margin-bottom: 5px;
-}
-
-.hp-carousel .caption {
-    text-align: center;
-}
-
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
     .brand {
