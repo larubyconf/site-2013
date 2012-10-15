@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require ./application
- *= require ./bootstrap_and_overrides
  *= require ./main
  *= require ./laruby
+ *= require ./bootstrap_and_overrides
  */
