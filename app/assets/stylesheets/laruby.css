@@ -34,6 +34,11 @@ header .well.blue {
     padding-right: 100px;
 }
 
+.dates {
+    font-size: 24px;
+    line-height: 36px;
+}
+
 .navbar-inner {
   background-color: #dedede; /* fallback color, place your own */
 
