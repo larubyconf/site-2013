@@ -32,6 +32,7 @@ body {
 .well.blue{
     border: #0e2647 2px solid;
     background-color: #f9f9f9;
+    font-size: 13px;
 }
 
 .divider a{
