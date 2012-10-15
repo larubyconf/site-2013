@@ -16,11 +16,18 @@ Larubyconf2013::Application.routes.draw do
 
   resources :proposals
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
 
   devise_for :users
 
   get "main/videos"
+
+  get "/admin" => 'main#admin'
+
+  namespace :admin do
+    resources :photos
+    resources :sponsors
+  end
 
   root :to => 'main#index'
 end

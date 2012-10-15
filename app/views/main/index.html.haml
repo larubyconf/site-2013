@@ -10,20 +10,7 @@
               %h2
                 Photos from our last conference
                 at the Marconi Automotive Museum!
-          .item.hp-carousel
-            =image_tag("photos/2009/kelli-cadillac-side-view.jpg")
-            .caption
-              a beautifully restored 1957 Cadillac
-          .item.hp-carousel
-            =image_tag("photos/2009/flying-robots.jpg")
-            .caption
-              Ron and Damon Evans presenting their flying robot - Ruby & Arduino
-          .item.hp-carousel
-            =image_tag("http://placehold.it/600x450")
-            .caption
-              a gorgeous place holder image from placehold.it
-          .item.hp-carousel
-            =image_tag("photos/2009/chrysler-pt.jpg")
+          = render :partial => 'item', :collection => @photos
         %a{:class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}
           <
         %a{:class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}

@@ -1,0 +1,20 @@
+=form_for [:admin, @photo], :html => {:class => 'horizontal-form', :multipart => true} do |f|
+  %legend
+    .pull-right
+      %button.btn.btn-primary{:type => 'submit'}
+        Save Changes
+      =link_to 'Cancel', admin_photos_path, :class => 'btn'
+    Photo Information
+  .fieldset
+    .control-group
+      =f.label :caption, :class => 'control-label'
+      .controls
+        =f.text_field :caption
+    .control-group
+      =f.label :sort_index, :class => 'control-label'
+      .controls
+        =f.text_field :sort_index, :size => 4
+    .control-group
+      =f.label :image, :class => 'control-label'
+      .controls
+        =f.file_field :image

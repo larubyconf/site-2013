@@ -6,6 +6,13 @@ GIT
       minitest (~> 3.4)
       rails (~> 3.0)
 
+GIT
+  remote: https://github.com/rweng/jquery-datatables-rails.git
+  revision: 727a8dbe6eacc052431a8222ca3566a87282d912
+  specs:
+    jquery-datatables-rails (1.11.1)
+      jquery-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -325,6 +332,7 @@ DEPENDENCIES
   execjs
   haml
   haml-rails
+  jquery-datatables-rails!
   jquery-rails
   minitest-rails!
   minitest-rails-capybara

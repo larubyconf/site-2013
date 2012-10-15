@@ -1,0 +1,20 @@
+= render :partial => 'admin/admin_navigation'
+.row
+  .span12
+    .well
+      = link_to 'Add a Photo', new_admin_photo_path, :class => 'btn pull-right btn-primary'
+      %legend
+        Photos
+      %table#photos.table.table-striped
+        %thead
+          %tr
+            %th
+              Caption
+            %th
+              Sort Index
+            %th
+              Photo
+            %th
+              Created at
+        %tbody
+          = render :partial => 'photo', :collection => @photos

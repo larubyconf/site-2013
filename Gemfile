@@ -1,3 +1,5 @@
+# LA Ruby Conf 2013
+
 source "https://rubygems.org"
 
 gem "rails", "3.2.8"
@@ -60,6 +62,7 @@ group :assets do
   gem "uglifier", ">= 1.0.3"
   gem "twitter-bootstrap-rails"
 
+    gem "jquery-datatables-rails", git: "https://github.com/rweng/jquery-datatables-rails.git"
 end
 
 gem "jquery-rails"

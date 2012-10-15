@@ -1,0 +1,11 @@
+%tr
+  %td
+    =photo.caption
+  %td
+    =photo.sort_index
+  %td
+    =image_tag(photo.image.url(:small))
+  %td
+    =photo.created_at
+  %td
+    =link_to 'edit',edit_admin_photo_path(photo)
