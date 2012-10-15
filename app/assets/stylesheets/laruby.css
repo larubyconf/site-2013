@@ -4,6 +4,7 @@ body {
 
 .navbar .nav.custom > li > a:hover {
     color: black;
+    
 }
 
 .brand {
@@ -57,6 +58,7 @@ header .well.blue {
 
 .navbar .nav > li > a {
   text-shadow: none;
+  padding: 9px 10px 11px;
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
