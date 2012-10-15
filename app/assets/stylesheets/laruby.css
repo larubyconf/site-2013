@@ -1,5 +1,6 @@
 body {
     background: url(/assets/seamless_white_background_texture.jpg) repeat;
+    background-size: 120px;
 }
 
 .navbar .nav.custom > li > a:hover {
@@ -22,8 +23,15 @@ body {
 .brand title {
     display: none;
 }
+
+.well {
+  background-color: #f9f9f9;
+  border: 2px solid #DDD;
+}
+
 .well.blue{
     border: #0e2647 2px solid;
+    background-color: #f9f9f9;
 }
 
 .divider a{
@@ -48,12 +56,11 @@ header .well.blue {
   background-color: #dedede; /* fallback color, place your own */
 
   /* Gradients for modern browsers, replace as you see fit */
-  background-image: -moz-linear-gradient(top, #dedede, white);
-  background-image: -ms-linear-gradient(top, #dedede, white);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dedede), to(white));
-  background-image: -webkit-linear-gradient(top, #dedede, white);
-  background-image: -o-linear-gradient(top, #dedede, white);
-  background-image: linear-gradient(top, #dedede, white);
+  background-image: -moz-linear-gradient(bottom, #dedede, white);
+  background-image: -ms-linear-gradient(bottom, #dedede, white);
+  background-image: -webkit-linear-gradient(bottom, #dedede, white);
+  background-image: -o-linear-gradient(bottom, #dedede, white);
+  background-image: linear-gradient(bottom, #dedede, white);
   background-repeat: repeat-x;
 
   /* IE8-9 gradient filter */
@@ -64,6 +71,8 @@ header .well.blue {
   text-shadow: none;
   padding: 9px 10px 11px;
   font-size: 13px;
+  line-height: 19px;
+  color: #555;
 }
 
 /* Landscape phones and down */
