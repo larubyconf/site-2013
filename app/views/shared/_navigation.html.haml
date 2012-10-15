@@ -8,36 +8,26 @@
       .container.nav-collapse
         %ul.nav.custom
           %li= link_to raw("<i class='icon-home icon-white'></i>Home"), root_path()
-          %li
-            =link_to image_tag("blue-ruby.png"), "#"
-          %li
+          %li.divider
             = link_to "Speakers", speakers_path 
           %li
             = link_to "Schedule", schedule_path
           %li
             = link_to "Sponsors", sponsors_path
-          %li 
+          %li.divider 
             = link_to "Workshops", workshops_path
           %li
-            =link_to image_tag("blue-ruby.png"), "#"
-          %li
             = link_to "Venue", venue_path
-          %li
+          %li.divider
             = link_to "Travel", travel_path
-          %li
-            =link_to image_tag("blue-ruby.png"), "#"
           %li
             = link_to "Call for Proposals", proposals_path
           %li
             = link_to "Videos from the Past", "/main/videos"
-          %li
-            -if current_user && current_user.admin?
-              =link_to image_tag("blue-ruby.png", :border => 0), admin_path
-            -else
-              =link_to image_tag("blue-ruby.png", :border => 0), "#"
+        %ul.nav.custom.pull-right
           -if current_user
             %li
-              =link_to 'My Account', my_account_path
+              =link_to current_user.email, my_account_path
             %li
               =link_to 'Sign Out', destroy_user_session_path, :method => 'delete'
           -else

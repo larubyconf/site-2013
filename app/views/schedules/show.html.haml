@@ -1,2 +1,64 @@
-%h1 Schedules#show
-%p Find me in app/views/schedules/show.html.haml
+.row
+  .span12
+    .page-title
+      Schedule
+.row
+  .span12
+    .sub-title
+      Workshop - Thursday, February 21, 2013
+.row
+  .span1
+    &nbsp;
+  .span10
+    .well
+      %table#workshop.table.table-striped
+        %thead
+          %tr
+            %th
+              Time
+            %th
+              Presentation
+        %tbody
+          = render :partial => 'presentation', :collection => @workshops_thursday
+  .span1
+    &nbsp;
+.row
+  .span12
+    .sub-title
+      Workshop - Friday, February 22, 2013
+.row
+  .span1
+    &nbsp;
+  .span10
+    .well
+      %table#workshop.table.table-striped
+        %thead
+          %tr
+            %th
+              Time
+            %th
+              Presentation
+        %tbody
+          = render :partial => 'presentation', :collection => @workshops_friday
+  .span1
+    &nbsp;
+.row
+  .span12
+    .sub-title
+      Conference - Saturday, February 23, 2013
+.row
+  .span1
+    &nbsp;
+  .span10
+    .well
+      %table#workshop.table.table-striped
+        %thead
+          %tr
+            %th
+              Time
+            %th
+              Presentation
+        %tbody
+          = render :partial => 'presentation', :collection => @presentations
+  .span1
+    &nbsp;
