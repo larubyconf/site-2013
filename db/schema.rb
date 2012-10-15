@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121015081140) do
+ActiveRecord::Schema.define(:version => 20121015090233) do
+
+  create_table "news_items", :force => true do |t|
+    t.string   "headline"
+    t.text     "body"
+    t.datetime "display_date"
+    t.datetime "expire_date"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "photos", :force => true do |t|
     t.string   "caption"
