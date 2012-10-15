@@ -4,7 +4,6 @@ require 'new_relic/recipes'
 # Load RVM's capistrano plugin
 require "rvm/capistrano"
 
-
 # Load Whenever's capistrano support
 #set :whenever_command, "bundle exec whenever"
 #set :whenever_environment, defer { stage }
@@ -28,7 +27,7 @@ set :keep_release, 5
 
 set :branch, 'master'
 
-set :user, 'laruby'
+set :user, 'deploy'
 set :use_sudo, false
 
 set :home_dir, "/home/#{user}/#{application}"
