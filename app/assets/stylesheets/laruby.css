@@ -65,6 +65,7 @@ header .well.blue {
   padding: 9px 10px 11px;
   font-size: 13px;
 }
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .brand {

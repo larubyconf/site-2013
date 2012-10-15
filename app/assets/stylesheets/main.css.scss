@@ -10,9 +10,10 @@
     }
 
     h2 {
-        font-size: 3em;
+        font-size: 2.8em;
         padding: 30px;
         line-height: 1em;
+        color: #9b0008;
     }
     text-align: center;
 }
@@ -73,4 +74,18 @@
 .introduction {
   font-size: 1.4em;
   line-height: 1.2em;
+}
+
+.news_item {
+  .headline {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    color: #9b0008;
+    margin-bottom: 5px;
+  }
+  .byline {
+    color: #0e2647;
+    font-style: italic;
+    margin-right; 5px;
+  }
 }
