@@ -6,4 +6,4 @@
     \-
     =news_item.user.try(:email)
   .body
-    =news_item.body
+    =raw(news_item.body)
