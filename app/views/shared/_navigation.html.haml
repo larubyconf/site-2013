@@ -7,15 +7,16 @@
         %span.icon-bar
       .container.nav-collapse
         %ul.nav.custom
-          %li= link_to raw("<i class='icon-home icon-white'></i>Home"), root_path()
           %li.divider
+            = link_to raw("<i class='icon-home icon-white'></i>Home"), root_path
+          %li
             = link_to "Speakers", speakers_path 
           %li
             = link_to "Schedule", schedule_path
-          %li
-            = link_to "Sponsors", sponsors_path
           %li.divider 
             = link_to "Workshops", workshops_path
+          %li.divider
+            = link_to "Sponsors", sponsors_path
           %li
             = link_to "Venue", venue_path
           %li.divider
