@@ -23,8 +23,8 @@ staging:
   encoding: utf8
   reconnect: false
   pool: 5
-  username: laruby-staging
-  password: mysqlRocks
+  username: root
+  password: l4ruby
   host: localhost
   database: larubyconf-2013-staging
 
