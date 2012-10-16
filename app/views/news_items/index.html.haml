@@ -1,0 +1,9 @@
+.row
+  .span3
+    =render :partial => 'sponsors/sponsor_side_rail'
+  .span6
+    .well
+      =render :partial => 'main/news_item', :collection => @news_items
+  .span3
+    .well
+      &nbsp;

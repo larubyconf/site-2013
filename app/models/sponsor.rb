@@ -18,6 +18,8 @@ class Sponsor < ActiveRecord::Base
     :full_size => '600x600'
   }
 
+  scope :all_active, order('level asc, sponsored_at asc')
+  
   ##
   # the name of the company / organization / individual who is
   # providing sponsorship

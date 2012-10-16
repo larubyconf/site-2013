@@ -82,7 +82,16 @@
     line-height: 1.2em;
     color: #9b0008;
     margin-bottom: 5px;
+    margin-top: 10px;
+    a {
+        color: #9b0008;
+    }
   }
+  .small-print {
+      text-align: right;
+      font-size: .75em;
+  }
+
   .byline {
     color: #0e2647;
     font-style: italic;
@@ -107,4 +116,13 @@
 
 .hp-carousel .caption {
     text-align: center;
+}
+
+.horizontal-form {
+    input.wide {
+        width: 420px;
+    }
+    textarea.wide {
+        width: 420px;
+    }
 }

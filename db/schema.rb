@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121015090233) do
+ActiveRecord::Schema.define(:version => 20121015235324) do
 
   create_table "news_items", :force => true do |t|
     t.string   "headline"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20121015090233) do
     t.datetime "display_date"
     t.datetime "expire_date"
     t.integer  "user_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "views",        :default => 0
   end
 
   create_table "photos", :force => true do |t|

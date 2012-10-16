@@ -1,9 +1,14 @@
 .news_item
   .headline
-    =news_item.headline
+    =link_to news_item.headline, news_item_path(news_item)
   .byline
     =news_item.display_date.strftime("%B %d, %Y @ %I:%M:%S %p %Z")
     \-
     =news_item.user.try(:email)
   .body
-    =raw(news_item.body)
+    =raw(display_truncated_body(news_item))
+  -if current_user && current_user.admin?
+    .small-print
+      = link_to 'edit', edit_admin_news_item_path(news_item)
+      \|
+      ="This item has been viewed #{pluralize(news_item.views, "time")}."

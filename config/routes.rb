@@ -1,5 +1,7 @@
 Larubyconf2013::Application.routes.draw do
 
+  resources :news_items, :only => [:index, :show]
+
   resource :travel, :only => [:show]
 
   resources :workshops, :only => [:index]
@@ -27,6 +29,7 @@ Larubyconf2013::Application.routes.draw do
   namespace :admin do
     resources :photos
     resources :sponsors
+    resources :news_items
   end
 
   root :to => 'main#index'

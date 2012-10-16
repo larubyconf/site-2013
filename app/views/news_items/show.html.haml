@@ -1,0 +1,14 @@
+.row
+  .span3
+    =render :partial => 'sponsors/sponsor_side_rail'
+  .span6
+    .well
+      .news_item
+        .headline
+          =@news_item.headline
+        .byline
+          =@news_item.display_date.strftime("%B %d, %Y @ %I:%M:%S %p %Z")
+          \-
+          =@news_item.user.try(:email)
+        .body
+          =raw(@news_item.body)

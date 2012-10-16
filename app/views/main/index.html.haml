@@ -22,7 +22,8 @@
           >
     .well
       %legend
-        News & Announcements
+        Recent News & Announcements
+        =link_to "(all)", news_items_path
       =render :partial => "news_item", :collection => @news_items
   .span3
     .well
