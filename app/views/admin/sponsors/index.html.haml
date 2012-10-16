@@ -1,6 +1,8 @@
 .row
   .span12
+    = render :partial => 'admin/admin_navigation'
     .well
+      =link_to 'Add Sponsor', new_admin_sponsor_path, :class => 'btn pull-right btn-primary'
       %legend
         Sponsors
       %table#sponsors.table.table-striped

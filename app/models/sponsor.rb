@@ -6,6 +6,12 @@ class Sponsor < ActiveRecord::Base
 
   belongs_to :primary_contact, :class_name => 'User'
 
+  belongs_to :created_by, :class_name => 'User',
+    :foreign_key => 'created_by_user_id'
+  belongs_to :updated_by, :class_name => 'User',
+    :foreign_key => 'updated_by_user_id'
+
+
   has_attached_file :logo,
   :storage => :s3,
   :bucket => 'larubyconf',
@@ -19,7 +25,7 @@ class Sponsor < ActiveRecord::Base
   }
 
   scope :all_active, order('level asc, sponsored_at asc')
-  
+
   ##
   # the name of the company / organization / individual who is
   # providing sponsorship
