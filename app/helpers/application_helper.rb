@@ -18,4 +18,13 @@ module ApplicationHelper
     end
   end
 
+  ##
+  # this method takes a label and a value and displays it with the
+  # appropriate divs, etc.. for inclusion on a form
+  def ff_read_only label, value
+    content_tag(:label, label, class: "control-label") +
+    content_tag(:div,   value, class: "controls display") +
+    content_tag(:div,   "",    class: "clear")
+  end
+
 end

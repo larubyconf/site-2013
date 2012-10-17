@@ -3,3 +3,17 @@
     .well
       %legend
         My Account
+      .label
+        User Information
+      =ff_read_only "eMail", current_user.email
+      .label
+        Authentications
+      %table#authentications.table.table-striped
+        %thead
+          %tr
+            %th
+              Provider
+            %th
+              UID
+        %tbody
+          = render :partial => 'authentication', :collection => current_user.authentications

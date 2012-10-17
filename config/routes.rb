@@ -1,5 +1,11 @@
 Larubyconf2013::Application.routes.draw do
 
+  match '/users/auth/:provider/callback' => 'authentications#create'
+
+  devise_for :users
+
+  resources :authentications
+  
   resources :news_items, :only => [:index, :show]
 
   resource :travel, :only => [:show]
@@ -19,8 +25,6 @@ Larubyconf2013::Application.routes.draw do
   resources :proposals
 
   mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
-
-  devise_for :users
 
   get "main/videos"
 
