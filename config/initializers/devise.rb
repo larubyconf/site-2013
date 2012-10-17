@@ -1,3 +1,5 @@
+require 'openid/store/filesystem'
+
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -209,7 +211,9 @@ Devise.setup do |config|
   config.omniauth :twitter,
     "0lwSfLh18Sb6mrNOVBmUA",
     "MJgIvTZsyEfviRbIuDxNiYNkuyY71bnV1Lg8Qo04"
-  
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), 
+                     :name => 'openid'
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
