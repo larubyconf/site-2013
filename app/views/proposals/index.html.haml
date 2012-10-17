@@ -1,6 +1,15 @@
 .row
-  .span3
+  .span12
+    .page-title
+      Call for Proposals
+.row
+  .span1
     &nbsp;
-  .span6
+  .span10
     .well
-      Proposals#index
+      .introduction
+        The Call for Proposals opens November 1, 2012 and will end on November 30, 2012.  To submit a proposal just Sign Up and click the Submit a Proposal button.
+      .center
+        %a.btn.btn-primary.offset{:href => new_proposal_path }
+          Submit a Proposal
+    = render :partial => 'proposal', :collection => @proposals

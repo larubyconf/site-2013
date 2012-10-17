@@ -126,3 +126,20 @@
         width: 420px;
     }
 }
+
+.workshop {
+    .name {
+        font-size: 2em;
+        color: #9b0008;
+        line-height: 1.2em;
+    }
+    .presented {
+        color: #0e2647;
+        font-style: italic;
+        margin-left: 5px;
+    }
+}
+
+.offset {
+    margin: 10px;
+}

@@ -1,0 +1,20 @@
+=form_for @proposal, :html => {:class => 'horizontal-form'} do |f|
+  %legend
+    .pull-right
+      %button.btn.btn-primary{:type => 'submit'}
+        Save Proposal
+      =link_to 'Cancel', proposals_path, :class => 'btn'
+    Submit a Proposal
+  .fieldset
+    .control-group
+      =f.label :title, :class => 'control-label'
+      .controls
+        =f.text_field :title, :class => 'wide'
+    .control-group
+      =f.label :abstract, :class => 'control-label'
+      .controls
+        =f.text_area :abstract, :class => 'wide', :rows => 10
+    .control-group
+      =f.label :target_audience
+      .controls
+        =f.text_field :target_audience, :class => 'control-label'

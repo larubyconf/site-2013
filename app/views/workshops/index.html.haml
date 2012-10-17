@@ -1,2 +1,11 @@
-%h1 Workshops#index
-%p Find me in app/views/workshops/index.html.haml
+.row
+  .span12
+    .page-title
+      Workshops
+.row
+  .span1
+    &nbsp;
+  .span10
+    =render :partial => "workshop", :collection => @workshops
+  .span1
+    &nbsp;
