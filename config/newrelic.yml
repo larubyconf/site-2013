@@ -14,7 +14,9 @@ common: &default_settings
   # You must specify the license key associated with your New Relic
   # account.  This key binds your Agent's data to your account in the
   # New Relic service.
-  license_key: '034b00ec18c9bcfc9e8f3a7605062ea9f161ae4b'
+  license_key: 'a7347644c25446d80932ef9f979a77d88e53a8dd' # ATT Cloud Key
+
+  #license_key: '034b00ec18c9bcfc9e8f3a7605062ea9f161ae4b'
 
   # Agent Enabled (Ruby/Rails Only)
   # Use this setting to force the agent to run or not run.
@@ -33,7 +35,7 @@ common: &default_settings
   # "All UI" then specify a semicolon-separated list of up to three
   # distinct names.  If you comment this out, it defaults to the
   # capitalized RAILS_ENV (i.e., Production, Staging, etc)
-  app_name: confreaks
+  app_name: LA Ruby Conf 2013
 
   # When "true", the agent collects performance data about your
   # application and reports this data to the New Relic service at
@@ -217,7 +219,7 @@ test:
 production:
   <<: *default_settings
   monitor_mode: true
-  app_name: confreaks (production)
+  app_name: LA Ruby Conf 2013 (production)
 
 # Many applications have a staging environment which behaves
 # identically to production.  Support for that environment is provided
@@ -225,4 +227,4 @@ production:
 staging:
   <<: *default_settings
   monitor_mode: true
-  app_name: My Application (Staging)
+  app_name: LA Ruby Conf 2013 (Staging)
