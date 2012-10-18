@@ -1,0 +1,2 @@
+- User.omniauth_providers.each do |provider|
+  = link_to image_tag("auth/#{provider}_64.png"), omniauth_authorize_path("user", provider)
