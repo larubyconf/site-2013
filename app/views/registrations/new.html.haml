@@ -6,24 +6,22 @@
         %button.btn.btn-primary.pull-right{:type => 'submit'}
           Register
         Registration
-
-        = devise_error_messages!
-        .fieldset
+      = devise_error_messages!
+      .fieldset
+        .control-group
+          =f.label :email, :class => 'control-label'
+          .controls
+            =f.email_field :email
+        -if @user.password_required?
           .control-group
-            =f.label :email, :class => 'control-label'
+            =f.label :password
             .controls
-              =f.email_field :email
-          -if @user.password_required?
-            .control-group
-              =f.label :password
-              .controls
-                =f.password_field :password
-            .control-group
-              =f.label :password_confirmation
-              .controls
-                =f.password_field :password_confirmation
-          =render :partial => 'devise/shared/links'
-
+              =f.password_field :password
+          .control-group
+            =f.label :password_confirmation
+            .controls
+              =f.password_field :password_confirmation
+        =render :partial => 'devise/shared/links'
     &nbsp;
   .span6
     .well

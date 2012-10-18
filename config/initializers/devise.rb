@@ -213,6 +213,13 @@ Devise.setup do |config|
     "MJgIvTZsyEfviRbIuDxNiYNkuyY71bnV1Lg8Qo04"
   config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), 
                      :name => 'openid'
+  config.omniauth :github,
+    "4cbd67c910f4755052ed",
+  "d29936d4b61c8f5ef2e68c3b453c912052b07518"
+
+  config.omniauth :facebook,
+    "329820607115934",
+    "7098e12e9eaa64b1f364f9f937c38014"
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

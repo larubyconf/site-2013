@@ -1,7 +1,9 @@
 .row
+  .span1
+    &nbsp;
   .span3
     = render :partial => 'sponsors/sponsor_side_rail'
-  .span6
+  .span3
     .well
       %legend
         Sign in
@@ -22,3 +24,9 @@
           .control-group
             =f.submit "Sign in"
       = render :partial => 'devise/shared/links'
+
+  .span4
+    .well
+      %legend
+        Sign in with one of the following:
+      = render :partial => 'devise/shared/auth_links'
