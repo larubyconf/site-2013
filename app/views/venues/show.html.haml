@@ -4,20 +4,6 @@
       Venues
 .row
   .span6
-    .well
-      .sub-title
-        Workshop - Venue
-      .center
-        Thursday and Friday, February 21 and 22, 2013
-      .introduction
-        %p
-          The venue that we have selected for the workshops is the Holiday Inn Media Center in Burbank, California.
+    = render :partial => 'workshop'
   .span6
-    .well
-      .sub-title
-        Conference - Venue
-      .center
-        Saturday, February 23, 2013
-      .introduction
-        %p
-          We are proud to announce that we are holding the 2013 Los Angeles Ruby Conference at the Marconi Automotive Museum in Tustin, California.       
+    = render :partial => 'conference'
