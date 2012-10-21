@@ -98,6 +98,9 @@ GEM
       warden (~> 1.2.1)
     devise-encryptable (0.1.1)
       devise (>= 2.1.0.rc)
+    dwolla (0.0.14)
+      faraday (>= 0.7.6)
+      multi_json (~> 1.0)
     errplane (0.4.12)
       actionpack (>= 2.3.14)
       activesupport (>= 2.3.14)
@@ -194,6 +197,10 @@ GEM
     omniauth (1.1.1)
       hashie (~> 1.2)
       rack
+    omniauth-dwolla (0.0.13)
+      dwolla (>= 0.0.13)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
     omniauth-github (1.0.3)
@@ -342,6 +349,7 @@ DEPENDENCIES
   newrelic_rpm
   nifty-generators
   omniauth
+  omniauth-dwolla
   omniauth-facebook
   omniauth-github
   omniauth-linkedin

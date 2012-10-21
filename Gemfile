@@ -27,6 +27,7 @@ gem "omniauth-twitter"
 gem "omniauth-openid"
 gem "omniauth-linkedin"
 gem "omniauth-github"
+gem "omniauth-dwolla"
 
 gem 'paperclip', "~> 3"
 gem 'aws-s3'

@@ -3,8 +3,6 @@
     .well
       %legend
         My Account
-      .label
-        User Information
       =ff_read_only "eMail", current_user.email
       -if current_user.authentications
         -unless current_user.authentications.empty?
