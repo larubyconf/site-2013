@@ -1,0 +1,38 @@
+.row
+  .span6
+    .well
+      =form_for @user, :url => my_account_path, :html => { :class => 'form-horizontal' } do |f|
+        %legend
+          %a.btn.pull-right{:href => my_account_path}
+            Cancel
+          %span.pull-right
+            &nbsp;
+          %button.btn.btn-primary.pull-right{:type => 'submit'}
+            Save Changes
+          My Account
+        .fieldset
+          .control-group
+            =f.label :email, :class => 'control-label'
+            .controls
+              =f.text_field :email
+          -if current_user.authentications
+            -unless current_user.authentications.empty?
+              %p
+                %strong
+                  You can sign in to this account using:
+                .authentications
+                  -current_user.authentications.each do |authentication|
+                    .authentication
+                      =image_tag "auth/#{authentication.provider}_32.png", :size => "32x32"
+                      .provider
+                        =authentication.provider_name
+                      .uid
+                        =authentication.uid
+                      =link_to "X", authentication, :confirm => "Are you sure you want to remove this sign in service?", :method => :delete, :class => 'remove'
+                .clear
+    .well
+      %legend
+        Add any of the following to this account
+      =render :partial => 'shared/auth_links'
+
+      

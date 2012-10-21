@@ -3,8 +3,6 @@
   .span6
     .well
       %legend
-        %button.btn.btn-primary.pull-right{:type => 'submit'}
-          Register
         Registration
       = devise_error_messages!
       .fieldset
@@ -21,6 +19,9 @@
             =f.label :password_confirmation
             .controls
               =f.password_field :password_confirmation
+        %button.btn.btn-primary{:type => 'submit'}
+          Register
+        %br
         =render :partial => 'devise/shared/links'
     &nbsp;
   .span6

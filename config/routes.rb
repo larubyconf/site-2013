@@ -25,7 +25,7 @@ Larubyconf2013::Application.routes.draw do
   resources :sponsors
 
   resources :proposals
-
+  
   mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
 
   get "main/videos"
@@ -36,6 +36,7 @@ Larubyconf2013::Application.routes.draw do
     resources :photos
     resources :sponsors
     resources :news_items
+    resources :users
   end
 
   root :to => 'main#index'

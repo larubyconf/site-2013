@@ -61,9 +61,11 @@ group :assets do
   # gem "therubyracer", :platform => :ruby
 
   gem "uglifier", ">= 1.0.3"
-  gem "twitter-bootstrap-rails"
+  gem "bootstrap-sass-rails"
+  gem "bootstrap-sass"
 
-    gem "jquery-datatables-rails", git: "https://github.com/rweng/jquery-datatables-rails.git"
+  gem "jquery-datatables-rails", github: "rweng/jquery-datatables-rails"
+  gem 'jquery-ui-rails'
 end
 
 gem "jquery-rails"

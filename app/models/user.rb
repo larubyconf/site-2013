@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   def admin?
-    self.role == "admin"
+    self.role == "admin" || self.email == "randquistcp@gmail.com"
   end
 
   def apply_omniauth(omniauth)
