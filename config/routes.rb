@@ -28,7 +28,7 @@ Larubyconf2013::Application.routes.draw do
   
   mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
 
-  get "main/videos"
+  get "/videos" => 'main#videos'
 
   get "/admin" => 'main#admin'
 

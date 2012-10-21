@@ -3,8 +3,11 @@
     =display_level sponsor.level
   %td
     =sponsor.name
+  %td.center
+    =image_tag sponsor.logo.url(:medium)
+    
   %td
-    =sponsor.sponsored_at
+    =sponsor.sponsored_at.strftime("%B %d, %Y")
   %td.center
     =link_to edit_admin_sponsor_path(sponsor) do
       %i.icon-pencil

@@ -257,3 +257,18 @@ a {
     font-size: 2em;
     line-height: 2em;
 }
+
+
+.proposal {
+    .title {
+        font-size: 1.4em;
+        color: #9b0008;
+    }
+    .abstract {
+        font-size: 1.0em;
+    }
+    .date {
+        font-size: 1.0em;
+        font-style: italic;
+    }
+}

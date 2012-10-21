@@ -26,3 +26,7 @@
       =f.label :message, :class => 'control-label'
       .controls
         =f.text_area :message, :rows => 5
+    .control-group
+      =f.label :sponsored_at, :class => 'control-label'
+      .controls
+        =f.text_field :sponsored_at, "data-behaviour" => "datepicker"
