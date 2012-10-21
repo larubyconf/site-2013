@@ -61,6 +61,7 @@ group :assets do
   # gem "therubyracer", :platform => :ruby
 
   gem "uglifier", ">= 1.0.3"
+  gem "less"
   gem "bootstrap-sass-rails"
   gem "bootstrap-sass"
   gem "bootstrap-datepicker-rails"
