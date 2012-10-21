@@ -62,8 +62,7 @@ group :assets do
 
   gem "uglifier", ">= 1.0.3"
   gem "less"
-  gem "bootstrap-sass-rails"
-  gem "bootstrap-sass"
+  gem "twitter-bootstrap-rails"
   gem "bootstrap-datepicker-rails"
   
   gem "jquery-datatables-rails", github: "rweng/jquery-datatables-rails"

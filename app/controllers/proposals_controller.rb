@@ -4,6 +4,7 @@ class ProposalsController < ApplicationController
   end
 
   def new
+    authenticate_user!
     @proposal = Proposal.new
   end
 
