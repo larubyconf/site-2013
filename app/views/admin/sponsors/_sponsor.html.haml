@@ -5,5 +5,8 @@
     =sponsor.name
   %td
     =sponsor.sponsored_at
-  %td
-    =link_to 'edit', edit_admin_sponsor_path(sponsor)
+  %td.center
+    =link_to edit_admin_sponsor_path(sponsor) do
+      %i.icon-pencil
+    =link_to admin_sponsor_path(sponsor), :method => :delete do
+      %i.icon-trash

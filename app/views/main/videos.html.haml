@@ -1,22 +1,32 @@
 .row
-  .span12
+  .span3
+    = render :partial => 'sponsors/sponsor_side_rail'
+  .span9
     .page-title
       Videos from past Conferences
     .well
       %dl
         %dt
-          =link_to "2012", "http://confreaks.com/events/larubyconf2012", :target => "_blank"
+          =link_to "http://confreaks.com/events/larubyconf2012", :target => "_blank" do
+            %h2
+              2012
         %dd
           In 2012 we held the conference at the Holliday Inn Express in Burbank, CA this is teh same venue we did in 2010.  Attendance was great with 180 developers coming out.
         %dt
-          =link_to "2011", "http://confreaks.com/events/larubyconf2011", :target => "_blank"
+          =link_to "http://confreaks.com/events/larubyconf2011", :target => "_blank" do
+            %h2
+              2011
         %dd
           In 2011 we moved the event to San Pedro, CA.  We added a second day of workshops, and had approximately 160 attendees.  Nearly all of our speakers were either from Los Angeles, or had ties to LA in some significant way.
         %dt
-          =link_to "2010", "http://confreaks.com/events/larubyconf2010", :target => "_blank"
+          =link_to "http://confreaks.com/events/larubyconf2010", :target => "_blank" do
+            %h2
+              2010
         %dd
           In 2010 we moved the conference to Burbank, CA.  We introduced one day of workshops the day before the event, and had a really good turn out.
         %dt
-          =link_to "2009", "http://confreaks.com/events/larubyconf2009", :target => "_blank"
+          =link_to "http://confreaks.com/events/larubyconf2009", :target => "_blank" do
+            %h2
+              2009
         %dd
           The first Los Angeles ruby conference was ironically held in Orange County at the Marconi Automotive Museum.  It was a great first year and we had about 110 attendees with speakers from across the country.

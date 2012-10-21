@@ -44,4 +44,17 @@ class Admin::NewsItemsController < Admin::Controller
   def show
     @news_item = NewsItem.find(params[:id])
   end
+
+  def destroy
+    @news_item = NewsItem.find(params[:id])
+    
+    if @news_item.destroy
+      flash[:success] = "The News Item has been successfully destroyed."
+    else
+      flash[:error] = "We were unable to delete the News Item."
+    end
+
+    redirect_to admin_news_items_path
+  end
+
 end

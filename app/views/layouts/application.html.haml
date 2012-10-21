@@ -22,6 +22,7 @@
       = render :partial => 'shared/header'
     .container
       .content
+        = content_for(:admin_nav)
         = render :partial => 'shared/display_flash'
         = yield
       = render :partial => 'shared/footer'

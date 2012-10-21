@@ -229,3 +229,31 @@
 .controls.display {
     padding-top: 5px;
 }
+
+th.center {
+    text-align: center;
+}
+
+td.center {
+    text-align: center;
+}
+
+td.center i.icon-pencil {
+    padding-right: 5px;
+}
+
+a {
+    color: #9b0008;
+}
+
+.large-stat {
+    text-align: center;
+    font-size: 4em;
+    line-height: 1em;
+}
+
+.stat {
+    text-align: center;
+    font-size: 2em;
+    line-height: 2em;
+}

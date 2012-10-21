@@ -1,6 +1,9 @@
+-content_for :admin_nav do
+  .row
+    .span12
+      = render :partial => 'admin/admin_navigation'
 .row
   .span12
-    = render :partial => 'admin/admin_navigation'
     .well
       %legend
         = link_to 'Add User', new_admin_user_path, :class => 'btn pull-right btn-primary'
@@ -12,7 +15,7 @@
               Email
             %th
               Authentications
-            %th
+            %th.center
               Actions
         %tbody
           = render :partial => 'user', :collection => @users

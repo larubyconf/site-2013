@@ -2,4 +2,9 @@
   =render :partial => 'sponsors/sponsor_splash', :collection => Sponsor.all_active, :as => :sponsor
   %legend
     Sponsorship Information
-  Sponsor the fifth annual Los Angeles Ruby Conference!  Sponsoring LA Ruby Conf gives you a fantastic opportunity to be in front of and meet with top Ruby talent in the Southern California area as well as the surrounding states.
+  %p
+    Sponsor the fifth annual Los Angeles Ruby Conference!  Sponsoring LA Ruby Conf gives you a fantastic opportunity to be in front of and meet with top Ruby talent in the Southern California area as well as the surrounding states.
+  = link_to '/media/2013-sponsorship-prospectus.pdf', :target => "_blank" do
+    .center
+      .btn.btn-primary
+        Sponsorship Prospectus

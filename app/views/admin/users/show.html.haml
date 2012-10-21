@@ -1,2 +1,47 @@
-%h1 Admin::Users#show
-%p Find me in app/views/admin/users/show.html.haml
+-content_for :admin_nav do
+  .row
+    .span12
+      = render :partial => 'admin/admin_navigation'
+.row
+  .span6
+    .well
+      %legend
+        %a.pull-right{:href => edit_admin_user_path }
+          %i.icon-pencil
+        My Account
+      .form-horizontal
+        =ff_read_only "eMail", @user.email
+        -if @user.authentications
+          -unless @user.authentications.empty?
+            %p
+              %strong
+                You can sign in to this account using:
+            .authentications
+              -@user.authentications.each do |authentication|
+                .authentication
+                  =image_tag "auth/#{authentication.provider}_32.png", :size => "32x32"
+                  .provider
+                    =authentication.provider_name
+                  .uid
+                    =authentication.uid
+                  =link_to "X", authentication, :confirm => "Are you sure you want to remove this sign in service?", :method => :delete, :class => 'remove'
+            .clear
+  .span3
+    .well
+      .label
+        Sign Ins
+      .large-stat
+        =@user.sign_in_count
+  .span3
+    .well
+      .label
+        Sign In
+      .stat
+        =time_ago_in_words(@user.current_sign_in_at)
+        ago
+  .span3
+    .well
+      .label
+        Sign In IP
+      .stat
+        =@user.current_sign_in_ip

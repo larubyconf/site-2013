@@ -3,12 +3,14 @@
   %h2
     = display_level sponsor.level
 .sponsor
+  -if current_user && (current_user == sponsor.primary_contact || current_user.admin?)
+  
+    =link_to edit_sponsor_path(sponsor) do
+      %i.icon-pencil.pull-right
   -if sponsor.logo_file_name
     .logo    
       =sponsor_link sponsor
   -else
     .name
       = sponsor.name
-  -if current_user && (current_user == sponsor.primary_contact || current_user.admin?)
-    %br
-    =link_to 'edit', edit_sponsor_path(sponsor)
+  

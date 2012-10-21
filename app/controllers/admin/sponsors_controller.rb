@@ -1,4 +1,4 @@
-class Admin::SponsorsController < ApplicationController
+class Admin::SponsorsController < Admin::Controller
   def index
     @sponsors = Sponsor.all
   end
@@ -41,5 +41,18 @@ class Admin::SponsorsController < ApplicationController
       flash[:error] = "Your changes were not saved."
       redirect_to edit_admin_sponsor_path
     end
-  end    
+  end
+
+  def destroy
+    @sponsor = Sponsor.find(params[:id])
+
+    if @sponsor.destroy
+      flash[:success] = "Sponsor successfully removed."
+      redirect_to admin_sponsors_path
+    else
+      flash[:error] = "Unable to delete the sponsor."
+      redirect_to admin_sponsors_path
+    end
+  end
+
 end
