@@ -19,11 +19,9 @@
             = link_to "Sponsors", sponsors_path
           %li
             = link_to "Venue", venue_path
-          %li.divider
-            = link_to "Travel", travel_path
           %li
             = link_to "Call for Proposals", proposals_path
-          %li
+          %li.divider
             = link_to "Videos from the Past", "/videos"
         %ul.nav.custom.pull-right
           -if current_user && current_user.admin?
