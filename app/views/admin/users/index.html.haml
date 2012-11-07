@@ -3,6 +3,25 @@
     .span12
       = render :partial => 'admin/admin_navigation'
 .row
+  .span3
+    .well
+      .label
+        Users
+      .large-stat
+        =@users.count
+  .span3
+    .well
+      .label
+        Logins
+      .large-stat
+        =@users.all.map {|user| user.sign_in_count}.sum
+  .span3
+    .well
+      .label
+        Last User to Sign in
+      .small-stat
+        =User.order('current_sign_in_at desc').first.email
+.row
   .span12
     .well
       %legend
@@ -11,6 +30,8 @@
       %table#users.table.table-striped.display
         %thead
           %tr
+            %th
+              Avatar
             %th
               Email
             %th
