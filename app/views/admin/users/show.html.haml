@@ -11,6 +11,11 @@
         My Account
       .form-horizontal
         =ff_read_only "eMail", @user.email
+        =ff_read_only "opt out", @user.opt_out
+        =ff_read_only "Avatar URL", @user.avatar_url
+        .control-group
+          .controls.display
+            =image_tag(avatar_url(@user))
         -if @user.authentications
           -unless @user.authentications.empty?
             %p

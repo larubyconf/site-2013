@@ -1,0 +1,18 @@
+.row
+  .span12
+    .page-title
+      Privacy Policy
+.row
+  .span1 
+    &nbsp;
+  .span10
+    .well
+      %p
+        Our 'privacy policy' at TechConf, LLC is simple.  We don't sell your email address, your name, your twitter handle, or any other personally identifiable information, and  we don't give it away either.  We do as part of our sponsorhip program send a few marketing emails to you on behalf of our sponsors.
+      %p
+        You can opt out of receiving any emails from us in regards to the Los Angeles Ruby Conference.  After you log in click on your email address in the top right of the primary navigation bar and then edit your profile, selecting the 'Opt-Out of emails' check box.  That's it.
+      -if current_user
+        %p        
+          Or since you are logged in just click
+          =link_to 'here', edit_my_account_path
+          and update your 'opt-out of emails' setting.

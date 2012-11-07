@@ -8,4 +8,7 @@ class MainController < ApplicationController
   def admin
     render :template => 'admin/index'
   end
+
+  def privacy
+  end
 end

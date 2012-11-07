@@ -39,5 +39,7 @@ Larubyconf2013::Application.routes.draw do
     resources :users
   end
 
+  match '/privacy' => 'main#privacy'
+  
   root :to => 'main#index'
 end
