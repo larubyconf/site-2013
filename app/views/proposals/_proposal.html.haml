@@ -1,8 +1,19 @@
 .well
   .proposal
+    .actions.pull-right
+      -if proposal.user == current_user
+        =link_to edit_proposal_path(proposal) do
+          %i.icon-pencil 
+            edit
+        %br
+        =link_to proposal_path(proposal), :method => :delete do
+          %i.icon-trash 
+            delete
     .title
       =proposal.title
-    .author
-      =proposal.user.email
     .abstract
       =proposal.abstract
+    .date
+      Submitted:
+      = proposal.created_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")
+        

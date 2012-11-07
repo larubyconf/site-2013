@@ -1,5 +1,7 @@
 %tr
   %td
+    = image_tag(avatar_url(user))
+  %td
     = link_to user.email, admin_user_path(user)
   %td
     =user.authentications.count

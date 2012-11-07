@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121107062309) do
+ActiveRecord::Schema.define(:version => 20121107093851) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20121107062309) do
     t.string   "role"
     t.boolean  "opt_out",                :default => false
     t.string   "avatar_url"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
