@@ -49,8 +49,9 @@ header .well.blue {
 }
 
 .dates {
-    font-size: 24px;
-    line-height: 36px;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.5em;
 }
 
 .navbar-inner {
@@ -81,7 +82,7 @@ header .well.blue {
     .brand {
         background-size: 200px;
         height: 130px;
-        margin-top: -10px;
+        margin-top: -20px;
     }
     .announcement h1 {
         font-size: 3.5em;
@@ -101,7 +102,7 @@ header .well.blue {
 /* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
     .brand {
-        background-size: 200px;
+        background-size: 250px;
         margin-top: 10px;
         height: 140px;
     }
@@ -114,6 +115,9 @@ header .well.blue {
         font-size: 2em;
         padding: 10px;
     }
+    .dates {
+        font-size: 1em;
+    }
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -121,6 +125,9 @@ header .well.blue {
     .brand {
         background-size: 405px;
         margin-top: 10px;
+    }
+    .dates {
+        font-size: 1em;
     }
  }
 
