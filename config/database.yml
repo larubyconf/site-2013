@@ -42,4 +42,4 @@ production:
   username: root
   password: l4ruby
   host: localhost
-  database: larubyconf_2013_roduction
+  database: larubyconf_2013_production

@@ -1,3 +1,3 @@
-role :web, "prod.larubyconf.com"
-role :app, "prod.larubyconf.com"
-role :db,  "prod.larubyconf.com", :primary => true
+role :web, "2013.larubyconf.com"
+role :app, "2013.larubyconf.com"
+role :db,  "2013.larubyconf.com", :primary => true
