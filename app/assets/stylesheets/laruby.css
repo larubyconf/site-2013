@@ -135,5 +135,7 @@ header .well.blue {
     }
  }
 
-/* Large desktop */
-@media (min-width: 1200px) {}
+/* Large desktop
+@media (min-width: 1200px) {
+}
+*/
