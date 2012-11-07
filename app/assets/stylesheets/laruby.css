@@ -101,6 +101,7 @@ header .well.blue {
     .annoucement h3 {
         font-size: 18px;
         line-height: 1.5em;
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -135,7 +136,6 @@ header .well.blue {
     }
  }
 
-/* Large desktop
+/* Large desktop */
 @media (min-width: 1200px) {
 }
-*/
