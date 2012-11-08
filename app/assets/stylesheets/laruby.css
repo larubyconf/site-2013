@@ -128,11 +128,14 @@ header .well.blue {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
     .brand {
-        background-size: 405px;
+        background-size: 300px;
         margin-top: 10px;
     }
     .dates {
         font-size: 1em;
+    }
+    .blue {
+      margin-top: 50px;
     }
  }
 
