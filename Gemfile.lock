@@ -146,6 +146,9 @@ GEM
       activesupport (>= 3.0.0)
     less (2.2.2)
       commonjs (~> 0.2.6)
+    less-rails (2.2.3)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
     libv8 (3.3.10.4)
     libwebsocket (0.1.5)
       addressable
@@ -338,6 +341,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   less
+  less-rails
   minitest-rails!
   minitest-rails-capybara
   mocha

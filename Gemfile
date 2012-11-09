@@ -62,6 +62,7 @@ group :assets do
 
   gem "uglifier", ">= 1.0.3"
   gem "less"
+  gem 'less-rails'
   gem "twitter-bootstrap-rails"
   gem "bootstrap-datepicker-rails"
   
