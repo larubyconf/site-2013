@@ -5,7 +5,6 @@ body {
 
 .navbar .nav.custom > li > a:hover {
     color: black;
-    
 }
 
 .brand {
@@ -102,6 +101,10 @@ header .well.blue {
         font-size: 18px;
         line-height: 1.5em;
     }
+    .blue {
+      margin-top: 12px;
+    }
+
 }
 
 /* Landscape phone to portrait tablet */
@@ -122,6 +125,9 @@ header .well.blue {
     }
     .dates {
         font-size: 1em;
+    }
+    .blue {
+      margin-top: 12px;
     }
 }
 
