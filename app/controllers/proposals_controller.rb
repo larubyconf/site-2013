@@ -55,4 +55,16 @@ class ProposalsController < ApplicationController
       redirect_to new_proposal_path
     end
   end
+
+  def delete
+    @proposal = Proposal.find(params[:id])
+    unless @proposal.user == current_user
+      flash[:error] = "You can not delete a proposal that is not yours."
+      redirect_to proposal_path(@proposal)
+    else
+      @proposal.destroy
+      flash[:success] = "You deleted your proposal."
+      redirect_to proposals_path
+    end
+  end    
 end
