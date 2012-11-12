@@ -1,0 +1,33 @@
+.row
+  .span12
+    .page-title
+      =@proposal.title
+.row
+  .span12
+    =link_to 'View all Proposals', proposals_path
+.row
+  .span12
+    .well
+      .proposal
+        .actions.pull-right
+          -if @proposal.user == current_user
+            =link_to edit_proposal_path(@proposal) do
+              %i.icon-pencil 
+                edit
+            %br
+            =link_to proposal_path(@proposal), :method => :delete do
+              %i.icon-trash 
+                delete
+        .title
+          =@proposal.title
+        .abstract
+          =@proposal.abstract
+        .audience
+          Target Audience:
+          = @proposal.target_audience
+        .date
+          Submitted:
+          = @proposal.created_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")
+          %br
+          Last updated:
+          = @proposal.updated_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")

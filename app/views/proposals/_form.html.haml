@@ -4,7 +4,10 @@
       %button.btn.btn-primary{:type => 'submit'}
         Save Proposal
       =link_to 'Cancel', proposals_path, :class => 'btn'
-    Submit a Proposal
+    -if controller.action_name == "edit"
+      Edit a Proposal
+    -else
+      Submit a Proposal
   .fieldset
     .control-group
       =f.label :title, :class => 'control-label'

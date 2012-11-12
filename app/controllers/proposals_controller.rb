@@ -8,6 +8,37 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.new
   end
 
+  def show
+    @proposal = Proposal.find(params[:id])
+  end
+
+  def edit
+    @proposal = Proposal.find(params[:id])
+    unless @proposal.user == current_user
+      flash[:error] = "You can not edit a proposal that is not yours."
+      redirect_to proposal_path(@proposal)
+    end
+  end
+
+  def update
+    @proposal = Proposal.find(params[:id])
+
+    unless @proposal.user == current_user
+      flash[:error] = "You can not edit a proposal that is not yours."
+      redirect_to proposal_path(@proposal)
+    end
+
+    @proposal.update_attributes(params[:proposal])
+
+    if @proposal.save
+      flash[:success] = "Your changes to your proposal have been saved."
+      redirect_to proposal_path(@proposal)
+    else
+      flash[:error] = "We could not save your changes."
+      redirect_to edit_proposal_path(@proposal)
+    end
+  end
+    
   def create
     @proposal = Proposal.new
 
