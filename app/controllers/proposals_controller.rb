@@ -9,7 +9,12 @@ class ProposalsController < ApplicationController
   end
 
   def show
-    @proposal = Proposal.find(params[:id])
+    @proposal = Proposal.find_by_id(params[:id])
+
+    unless @proposal
+      flash[:error] = "The proposal you requested id: #{params[:id]} does not exist in the system, please report the URL that led you here to staff@larubyconf.com"
+      redirect_to proposals_path
+    end
   end
 
   def edit
