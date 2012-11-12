@@ -56,7 +56,7 @@ class ProposalsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @proposal = Proposal.find(params[:id])
     unless @proposal.user == current_user
       flash[:error] = "You can not delete a proposal that is not yours."
