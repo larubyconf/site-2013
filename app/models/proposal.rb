@@ -3,6 +3,8 @@ class Proposal < ActiveRecord::Base
   
   belongs_to :user
 
+  has_many :votes
+  
   scope :accepted, where(:status => 'accepted')
 
   def name
