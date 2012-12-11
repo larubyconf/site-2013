@@ -24,7 +24,7 @@ Larubyconf2013::Application.routes.draw do
 
   resources :sponsors
 
-  resources :proposals
+  resources :proposals, :except => [:new, :create]
   
   mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
 
