@@ -64,6 +64,10 @@ namespace :deploy do
 
       put result, "#{shared_path}/system/maintenance.html", :mode =>0644
     end
+
+    task :enable, :roles => :web, :except => {:no_release => true} do
+      run "rm #{shared_path}/system/maintenance.html"
+    end
   end
 end
 
