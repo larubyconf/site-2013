@@ -3,7 +3,7 @@ class Proposal < ActiveRecord::Base
   
   belongs_to :user
 
-  has_many :votes
+  has_many :votes, :dependent => :destroy
   
   scope :accepted, where(:status => 'accepted')
 

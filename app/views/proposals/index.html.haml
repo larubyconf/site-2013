@@ -8,7 +8,12 @@
   .span10
     .well
       .introduction
-        The Call for Proposals has closed, thank you for all of your submissions.
         %p
-          Voting for proposals will open tomorrow and run through next Monday!
+          Voting for proposals is now open!
+        - if current_user
+          %p.center
+            You have
+            =pluralize(current_user.votes_left, "vote")
+            remaining to cast.
+          
     = render :partial => 'proposal', :collection => @proposals

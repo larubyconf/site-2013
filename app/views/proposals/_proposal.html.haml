@@ -16,4 +16,11 @@
     .date
       Submitted:
       = proposal.created_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")
-        
+    .actions    
+      Votes: 
+      =proposal.votes.count
+      - if current_user
+        - if current_user.proposals_voted_for.include?(proposal)
+          = link_to "Remove your vote", down_my_account_proposal_votes_path(proposal)
+        - else
+          = link_to 'Vote', up_my_account_proposal_votes_path(proposal)

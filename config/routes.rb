@@ -20,12 +20,19 @@ Larubyconf2013::Application.routes.draw do
 
   resource :schedule, :only => [:show]
 
-  resource :my_account
+  resource :my_account do
+    resources :proposals, :only => [] do
+      resources :votes, :only => [] do
+        get 'up', :on => :collection
+        get 'down', :on => :collection
+      end
+    end
+  end
 
   resources :sponsors
 
   resources :proposals, :except => [:new, :create]
-  
+
   mount RailsAdmin::Engine => '/radmin', :as => 'rails_admin'
 
   get "/videos" => 'main#videos'

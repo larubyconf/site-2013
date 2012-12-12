@@ -7,6 +7,9 @@
         My Account
       .form-horizontal
         =ff_read_only "eMail", current_user.email
+        =ff_read_only "Opt Out of email", current_user.opt_out ? "Yes":"No"
+        - if current_user.admin?
+          =ff_read_only "User ID", current_user.id
         -if current_user.authentications
           -unless current_user.authentications.empty?
             %p
@@ -26,3 +29,21 @@
       %legend
         Add any of the following to this account
       =render :partial => 'shared/auth_links'
+  .span3
+    .well
+      .label
+        Votes Cast
+      .large-stat
+        =current_user.votes.count
+      click title to remove vote
+      -if current_user.votes.count > 0
+        %ul
+          - current_user.votes.each do |vote|
+            %li
+              =link_to vote.proposal.title, down_my_account_proposal_votes_path(vote.proposal)
+  .span3
+    .well
+      .label
+        Votes Left
+      .large-stat
+        =current_user.votes_left
