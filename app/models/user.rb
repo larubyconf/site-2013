@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 
   has_many :proposals
 
-  MAX_VOTES = 3
+  MAX_VOTES = 5
   
   def admin?
     self.role == "admin" || self.email == "randquistcp@gmail.com"
