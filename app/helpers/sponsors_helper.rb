@@ -5,7 +5,7 @@ module SponsorsHelper
 
   def sponsor_link sponsor, image_size = :medium
     if sponsor.url
-      link_to image_tag(sponsor.logo.url(image_size)), sponsor.url, :target => "_blank"
+      link_to image_tag(sponsor.logo.url(image_size)), click_path(sponsor), :target => "_blank"
     else
       link_to image_tag(sponsor.logo.url(image_size)), sponsor_path(sponsor)
     end

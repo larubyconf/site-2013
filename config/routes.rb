@@ -6,6 +6,8 @@ Larubyconf2013::Application.routes.draw do
     :registrations => 'registrations'
   }
 
+  resources :clicks, :only => [:show]
+  
   resources :authentications
   
   resources :news_items, :only => [:index, :show]
