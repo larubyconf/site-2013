@@ -6,5 +6,5 @@
       -else
         =sponsor.name
     .message
-      =sponsor.message
+      =Haml::Engine.new(sponsor.message).render
   .clear
