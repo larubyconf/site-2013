@@ -4,7 +4,7 @@
       -unless sponsor.logo_file_name.nil?
         =sponsor_link sponsor, :medium
       -else
-        =sponsor.name
+        =link_to sponsor.name, click_path(sponsor)
     .message
       =Haml::Engine.new(sponsor.message).render
   .clear
