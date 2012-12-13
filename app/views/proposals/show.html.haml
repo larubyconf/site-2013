@@ -22,9 +22,13 @@
           =@proposal.title
         .abstract
           =@proposal.abstract
+        .votes
+          Votes:
+          = @proposal.votes.count
+          = render :partial => 'shared/vote', :locals => { :proposal => @proposal }
         .audience
           Target Audience:
-          = @proposal.target_audience
+          = @proposal.target_audience        
         .date
           Submitted:
           = @proposal.created_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")
