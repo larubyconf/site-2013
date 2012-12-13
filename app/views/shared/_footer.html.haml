@@ -3,8 +3,8 @@
     .span4
       = render :partial => 'shared/google_plus_one'    
       %br
-      Follow us on Twitter 
-      = link_to '@larubyconf', "http://twitter.com/larubyconf", :target => "_blank"
+      = render :partial => 'shared/twitter_follow_button', :locals => {:twitter => '@larubyconf' }
+
     .span4.center
       &copy; TechConf, LLC 2009-2012
     .span4
