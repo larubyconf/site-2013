@@ -1,15 +1,21 @@
 .row
-  .span12
+  .span3
+    &nbsp;
+  .span9
     .page-title
       Proposals  
 .row
-  .span1
-    &nbsp;
-  .span10
+  .span3
+    = render :partial => 'sponsors/sponsor_side_rail'
+  .span9
     .well
       .introduction
-        %p
+        %h2.center
           Voting for proposals is now open!
+        %p.center
+          = number_with_delimiter(Vote.all.count)
+          votes cast to date, max 5 votes per user.
+          
         - if current_user
           %p.center
             You have
