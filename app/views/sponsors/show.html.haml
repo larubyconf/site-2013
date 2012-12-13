@@ -5,5 +5,7 @@
     .well
       .sponsor-logo
         =image_tag(@sponsor.logo.url(:full_size))
+      .sponsor-url
+        =link_to 'Visit their site!', click_path(@sponsor), :target => "_blank"
       .sponsor-message
         =Haml::Engine.new(@sponsor.message).render
