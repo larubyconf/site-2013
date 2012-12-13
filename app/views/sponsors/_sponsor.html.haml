@@ -5,6 +5,8 @@
         =sponsor_link sponsor, :medium
       -else
         =link_to sponsor.name, click_path(sponsor)
+      - if sponsor.twitter_handle
+        = render :partial => 'shared/twitter_follow_button', :locals => {:twitter => sponsor.twitter_handle}
     .message
       =Haml::Engine.new(sponsor.message).render
   .clear

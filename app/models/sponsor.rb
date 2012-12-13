@@ -2,7 +2,7 @@
 # the sponsor object represents a conference sponsor
 class Sponsor < ActiveRecord::Base
   attr_accessible :name, :level, :sponsored_at, :primary_contact_id,
-    :message, :logo, :note, :url
+    :message, :logo, :note, :url, :twitter_handle
 
   belongs_to :primary_contact, :class_name => 'User'
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121212082318) do
+ActiveRecord::Schema.define(:version => 20121213061857) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20121212082318) do
     t.string   "url"
     t.integer  "created_by_user_id"
     t.integer  "updated_by_user_id"
+    t.string   "twitter_handle"
   end
 
   create_table "users", :force => true do |t|
