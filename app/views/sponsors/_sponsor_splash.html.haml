@@ -15,4 +15,6 @@
   -else
     .name
       = sponsor.name
-  
+  - if sponsor.twitter_handle
+    .center
+      = render :partial => 'shared/twitter_follow_button', :locals => {:twitter => sponsor.twitter_handle }
