@@ -7,5 +7,8 @@
         =image_tag(@sponsor.logo.url(:full_size))
       .sponsor-url
         =link_to 'Visit their site!', click_path(@sponsor), :target => "_blank"
+      -if @sponsor.twitter_handle
+        .center
+          = render :partial => 'shared/twitter_follow_button', :locals => { :twitter => @sponsor.twitter_handle}
       .sponsor-message
         =Haml::Engine.new(@sponsor.message).render
