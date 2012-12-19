@@ -1,6 +1,10 @@
 class ProposalsController < ApplicationController
   def index
-    @proposals = Proposal.all
+    if Vote.open?
+      @proposals = Proposal.all
+    else
+      @proposals = Proposal.most_votes
+    end
   end
 
   def new

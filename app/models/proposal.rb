@@ -7,6 +7,12 @@ class Proposal < ActiveRecord::Base
   
   scope :accepted, where(:status => 'accepted')
 
+  scope :most_votes,
+  select("proposals.*, count(votes.id) as votes_count").
+    group(:title).
+    joins("left outer join votes on votes.proposal_id = proposals.id").
+    order("votes_count desc")
+  
   def name
     self.title
   end
