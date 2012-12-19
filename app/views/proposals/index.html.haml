@@ -11,10 +11,24 @@
     .well
       .introduction
         %h2.center
-          Voting for proposals is now open!
+          - if Vote.status == "PRE"
+            Voting will begin on
+            = RAC::VOTE_START_DATE
+          -elsif Vote.status == "POST"
+            Voting has been closed, watch 
+            =link_to 'schedule', schedule_path()
+            for more information.
+          -else
+            Voting for proposals is now open!
         %p.center
-          = number_with_delimiter(Vote.all.count)
-          votes cast to date, max 5 votes per user.
+          - if Vote.status == "POST"
+            =number_with_delimiter(Vote.all.count)
+            votes where cast for
+            =number_with_delimiter(Proposal.all.count)
+            proposals.
+          - elsif Vote.open?
+            = number_with_delimiter(Vote.all.count)
+            votes cast to date, max 5 votes per user.
           
         - if current_user
           %p.center

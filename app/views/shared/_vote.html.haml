@@ -1,4 +1,4 @@
-- if current_user
+-if Vote.open?
   - if current_user.proposals_voted_for.include?(proposal)
     = link_to "Remove your vote", down_my_account_proposal_votes_path(proposal)
   - else

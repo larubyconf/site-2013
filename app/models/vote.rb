@@ -8,4 +8,26 @@ class Vote < ActiveRecord::Base
   belongs_to :user
   belongs_to :proposal
   
+  def self.open?
+    Time.now >= start_date && Time.now <= end_date
+  end
+
+  def self.status
+    if open?
+      "OPEN"
+    elsif Time.now < start_date
+      "PRE"
+    else
+      "POST"
+    end
+  end
+  
+  def self.start_date
+    return Date.parse("2012-12-17 23:59:59")
+  end
+
+  def self.end_date
+    return Date.parse("2012-12-10 00:00:00")
+  end
+  
 end
