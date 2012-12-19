@@ -77,4 +77,8 @@ class User < ActiveRecord::Base
   def votes_left
     MAX_VOTES - votes.count
   end
+
+  def vote_weight
+    votes.count.to_f / MAX_VOTES.to_f
+  end
 end

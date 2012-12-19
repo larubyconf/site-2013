@@ -12,6 +12,10 @@ class Proposal < ActiveRecord::Base
     group(:title).
     joins("left outer join votes on votes.proposal_id = proposals.id").
     order("votes_count desc")
+
+  def weighted_votes
+    votes.map {|vote| 1 * vote.user.vote_weight}.sum
+  end
   
   def name
     self.title
