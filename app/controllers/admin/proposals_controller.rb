@@ -55,7 +55,10 @@ class Admin::ProposalsController < ApplicationController
         flash[:error] = "Unable to change the status on '#{@proposal.title}'"
       end
     end
-
-    redirect_to admin_proposals_path
+    if params[:from] == 'show'
+      redirect_to admin_proposal_path(@proposal)
+    else        
+      redirect_to admin_proposals_path
+    end
   end
 end

@@ -35,12 +35,34 @@
   .span3
     .well
       .label
-        Navigation
+        Actions
       .center
         = @proposal == Proposal.all.first ? 'First' : link_to("First",admin_proposal_path(Proposal.all.first))
         = @proposal.prev.nil? ? 'Prev' : link_to("Prev", admin_proposal_path(@proposal.prev))
         = @proposal.next.nil? ? 'Next' : link_to("Next", admin_proposal_path(@proposal.next))
         = @proposal == Proposal.all.last ? 'Last' : link_to("Last", admin_proposal_path(Proposal.all.last))
+        %br
+        - unless @proposal.status == "considered"
+          = link_to('Consider', consider_admin_proposal_path(@proposal, :from => 'show'), :method => :put)
+        - else
+          Consider
+        - unless @proposal.status == "accepted"
+          = link_to('Accept', accept_admin_proposal_path(@proposal, :from => 'show'),     :method => :put)
+        - else
+          Accept
+        - unless @proposal.status == "rejected"
+          = link_to('Reject', reject_admin_proposal_path(@proposal, :from => 'show'),     :method => :put)
+        -else
+          Reject
+        - unless @proposal.status.blank?
+          = link_to('Clear', clear_admin_proposal_path(@proposal, :from => 'show'),       :method => :put)
+        -else
+          Clear
+        - unless @proposal.status == "confirmed"
+          = link_to("Confirm", confirm_admin_proposal_path(@proposal, :from => 'show'),   :method => :put)
+        -else
+          Confirm
+
 
     .well
       .label
