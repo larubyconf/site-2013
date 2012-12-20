@@ -52,6 +52,7 @@ Larubyconf2013::Application.routes.draw do
       put 'reject', :on => :member
       put 'consider', :on => :member
       put 'clear', :on => :member
+      put 'confirm', :on => :member
     end
   end
 

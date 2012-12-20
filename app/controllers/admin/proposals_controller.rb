@@ -1,6 +1,19 @@
 class Admin::ProposalsController < ApplicationController
   def index
-    @proposals = Proposal.all
+    case params[:filter]
+    when "confirmed"
+      @proposals = Proposal.confirmed
+    when "rejected"
+      @proposals = Proposal.rejected
+    when "accepted"
+      @proposals = Proposal.accepted
+    when "considered"
+      @proposals = Proposal.considered
+    when "review"
+      @proposals = Proposal.to_review
+    else
+      @proposals = Proposal.all
+    end
   end
 
   def show
@@ -22,6 +35,10 @@ class Admin::ProposalsController < ApplicationController
 
   def consider
     change_status params[:id], 'considered'
+  end
+
+  def confirm
+    change_status params[:id], 'confirmed'
   end
 
   def change_status id, status

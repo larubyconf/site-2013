@@ -14,6 +14,8 @@ class Proposal < ActiveRecord::Base
   scope :considered, where(:status => 'considered')
 
   scope :to_review, where("status is null or status = ''")
+
+  scope :confirmed, where(:status => 'confirmed')
   
   scope :most_votes,
   select("proposals.*, count(votes.id) as votes_count").
@@ -27,5 +29,13 @@ class Proposal < ActiveRecord::Base
   
   def name
     self.title
+  end
+
+  def next
+    Proposal.where("id > ?", id).first 
+  end
+
+  def prev
+    Proposal.where("id < ?", id).last
   end
 end

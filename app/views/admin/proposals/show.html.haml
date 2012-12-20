@@ -10,6 +10,8 @@
           =@proposal.title
         .abstract
           =@proposal.abstract
+        .author
+          = @proposal.user.email unless @proposal.user.nil?
         .audience
           Target Audience:
           = @proposal.target_audience        
@@ -33,6 +35,15 @@
   .span3
     .well
       .label
+        Navigation
+      .center
+        = @proposal == Proposal.all.first ? 'First' : link_to("First",admin_proposal_path(Proposal.all.first))
+        = @proposal.prev.nil? ? 'Prev' : link_to("Prev", admin_proposal_path(@proposal.prev))
+        = @proposal.next.nil? ? 'Next' : link_to("Next", admin_proposal_path(@proposal.next))
+        = @proposal == Proposal.all.last ? 'Last' : link_to("Last", admin_proposal_path(Proposal.all.last))
+
+    .well
+      .label
         Status
       .large-stat
         =@proposal.status
@@ -42,4 +53,4 @@
       .large-stat
         =@proposal.votes.count
         \/
-        =@proposal.weighted_votes
+        =number_with_precision(@proposal.weighted_votes, :precision => 2)

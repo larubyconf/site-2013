@@ -24,12 +24,20 @@
   .span3
     .well
       .label
-        Accepted
+        Accepted / Confirmed
       .large-stat
         =Proposal.accepted.count
+        \/
+        =Proposal.confirmed.count
 .row
   .span12
     .well
+      = link_to 'All', admin_proposals_path
+      = link_to 'Accepted',   admin_proposals_path(:filter => 'accepted')
+      = link_to 'Rejected',   admin_proposals_path(:filter => 'rejected')
+      = link_to 'Considered', admin_proposals_path(:filter => 'considered')
+      = link_to 'To Review',  admin_proposals_path(:filter => 'review')
+      = link_to 'Confirmed',  admin_proposals_path(:filter => 'confirmed')
       %table#proposals.table.table-striped
         %thead
           %tr
