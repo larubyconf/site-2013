@@ -79,3 +79,5 @@ gem "mongrel", ">=1.2.0.pre2",  :group => :development
 gem "action_args"
 
 gem "errplane"
+
+gem "acts_as_commentable_with_threading"

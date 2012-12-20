@@ -4,9 +4,17 @@ class Proposal < ActiveRecord::Base
   belongs_to :user
 
   has_many :votes, :dependent => :destroy
+
+  acts_as_commentable
   
   scope :accepted, where(:status => 'accepted')
 
+  scope :rejected, where(:status => 'rejected')
+
+  scope :considered, where(:status => 'considered')
+
+  scope :to_review, where(:status => '')
+  
   scope :most_votes,
   select("proposals.*, count(votes.id) as votes_count").
     group(:title).

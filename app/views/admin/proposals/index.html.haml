@@ -1,0 +1,51 @@
+-content_for :admin_nav do
+  .row
+    .span12
+      = render :partial => 'admin/admin_navigation'
+.row
+  .span3
+    .well
+      .label
+        Proposals to Review
+      .large-stat
+        =Proposal.to_review.count
+  .span3
+    .well
+      .label
+        Considered
+      .large-stat
+        =Proposal.considered.count
+  .span3
+    .well
+      .label
+        Rejected
+      .large-stat
+        =Proposal.rejected.count
+  .span3
+    .well
+      .label
+        Accepted
+      .large-stat
+        =Proposal.accepted.count
+.row
+  .span12
+    .well
+      %table#proposals.table.table-striped
+        %thead
+          %tr
+            %th
+              Status
+            %th
+              Title
+            %th
+              Author
+            %th
+              Submitted on
+            %th
+              Comments
+            %th
+              Actions
+        %tbody
+          = render :partial => 'proposal', :collection => @proposals
+
+      

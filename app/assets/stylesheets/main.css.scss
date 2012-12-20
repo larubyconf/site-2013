@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+td.tr { 
+    padding-right: 15px;
+    text-align: right;
+}
+
+.comment-form {
+    margin-top: 5px;
+}
+
+.comment {
+    padding: 3px;
+    .date {
+        text-align: right;
+        font-size: .8em;
+    }
+    .author {
+        text-align: right;
+        font-size: .8em;
+    }
+}
+
 .twitter-button {
     padding: 5px;
 }

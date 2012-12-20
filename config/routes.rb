@@ -46,6 +46,13 @@ Larubyconf2013::Application.routes.draw do
     resources :sponsors
     resources :news_items
     resources :users
+    resources :proposals do
+      resources :comments
+      put 'accept', :on => :member
+      put 'reject', :on => :member
+      put 'consider', :on => :member
+      put 'clear', :on => :member
+    end
   end
 
   match '/privacy' => 'main#privacy'
