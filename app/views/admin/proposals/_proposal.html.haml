@@ -5,6 +5,10 @@
     =link_to proposal.title, admin_proposal_path(proposal)
   %td
     =proposal.user.email if proposal.user
+  %td.tr
+    =proposal.votes.count
+  %td.tr
+    =proposal.weighted_votes
   %td
     =proposal.created_at.strftime("%m-%d-%Y")
   %td.center
