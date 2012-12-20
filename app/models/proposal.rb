@@ -13,7 +13,7 @@ class Proposal < ActiveRecord::Base
 
   scope :considered, where(:status => 'considered')
 
-  scope :to_review, where(:status => '')
+  scope :to_review, where("status is null or status = ''")
   
   scope :most_votes,
   select("proposals.*, count(votes.id) as votes_count").
