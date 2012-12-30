@@ -1,0 +1,21 @@
+= form_for [:admin, @proposal], :html => {:class => 'form-horizontal'} do |f|
+  %legend
+    .pull-right
+      %button.btn.btn-primary{:type => 'submit'}
+        Save Changes
+      = link_to 'Cancel', admin_proposal_path(@proposal), :class => 'btn'
+    Edit Proposal
+      
+  .fieldset
+    .control-group
+      =f.label :title, :class => 'control-label'
+      .controls
+        =f.text_field :title, :class => 'wide'
+    .control-group
+      =f.label :presented_at, :class => 'control-label'
+      .controls
+        =f.text_field :presented_at
+    .control-group
+      =f.label :duration, :class => 'control-label'
+      .controls
+        =f.text_field :duration

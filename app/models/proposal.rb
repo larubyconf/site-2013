@@ -1,5 +1,6 @@
 class Proposal < ActiveRecord::Base
-  attr_accessible :title, :abstract, :target_audience
+  attr_accessible :title, :abstract, :target_audience, :presented_at,
+  :duration
   
   belongs_to :user
 

@@ -14,7 +14,7 @@ Larubyconf2013::Application.routes.draw do
 
   resource :travel, :only => [:show]
 
-  resources :workshops, :only => [:index]
+  resources :workshops, :only => [:index, :show]
 
   resource :venue, :only => [:show]
 
@@ -46,6 +46,7 @@ Larubyconf2013::Application.routes.draw do
     resources :sponsors
     resources :news_items
     resources :users
+    resources :workshops
     resources :proposals do
       resources :comments
       put 'accept', :on => :member

@@ -20,6 +20,20 @@ class Admin::ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
     @comment = Comment.new
   end
+
+  def edit
+    @proposal = Proposal.find(params[:id])
+  end
+
+  def update
+    @proposal = Proposal.find(params[:id])
+
+    @proposal.update_attributes(params[:proposal])
+
+    if @proposal.save
+      redirect_to proposal_path(@proposal)
+    end
+  end
   
   def accept
     change_status params[:id], 'accepted'
