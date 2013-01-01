@@ -12,7 +12,7 @@
     .well
       .proposal
         .actions.pull-right
-          - if current_user.admin?
+          - if current_user && current_user.admin?
             = link_to edit_admin_proposal_path(@proposal) do
               %i.icon-pencil
                 edit
