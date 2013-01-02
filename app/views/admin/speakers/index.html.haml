@@ -1,0 +1,25 @@
+-content_for :admin_nav do
+  .row
+    .span12
+      = render :partial => 'admin/admin_navigation'
+.row
+  .span12
+    .well
+      .pull-right
+        = link_to 'Add Speaker', new_admin_speaker_path, :class => 'btn btn-primary'
+      .page-title
+        Speakers
+      %table#speakers.table.table-striped
+        %thead
+          %tr
+            %th
+              Name
+            %th
+              Twitter Handle
+            %th
+              Bio
+            %th
+              Actions
+        %tbody
+          = render :partial => 'speaker', :collection => @speakers
+              

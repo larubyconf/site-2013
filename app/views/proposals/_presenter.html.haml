@@ -1,0 +1,8 @@
+.speaker
+  .photo
+    =image_tag presenter.photo.url(:medium)
+    .caption
+      =presenter.full_name
+  .bio
+    =Haml::Engine.new(presenter.bio).render
+.clear

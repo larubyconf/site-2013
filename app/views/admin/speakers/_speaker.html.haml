@@ -1,0 +1,16 @@
+%tr
+  %td
+    = image_tag speaker.photo.url(:medium)
+  %td.nowrap
+    = link_to speaker.full_name, admin_speaker_path(speaker)
+  %td
+    = link_to speaker.twitter_handle, "http://twitter.com/#{speaker.twitter_handle}", :target => "_blank"
+  %td
+    = Haml::Engine.new(speaker.bio).render
+  %td.nowrap
+    = link_to edit_admin_speaker_path(speaker) do
+      %i.icon-pencil
+        edit
+    = link_to admin_speaker_path(speaker), :method => :delete do
+      %i.icon-trash
+        delete

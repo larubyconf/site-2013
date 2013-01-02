@@ -1,0 +1,13 @@
+.well
+  .speaker
+    .name
+      = speaker.full_name
+      \/
+      = link_to(speaker.twitter_handle, "http://twitter.com/#{speaker.twitter_handle}", :target => "_blank") unless speaker.twitter_handle.nil?
+    .presentation
+      = link_to(speaker.presentations[0].proposal.title, proposal_path(speaker.presentations[0].proposal)) unless speaker.presentations.count == 0
+    .photo
+      = image_tag speaker.photo.url(:medium)
+    .bio
+      = Haml::Engine.new(speaker.bio).render
+  .clear

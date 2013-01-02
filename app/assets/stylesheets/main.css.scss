@@ -7,6 +7,10 @@ td.tr {
     text-align: right;
 }
 
+td.nowrap {
+    white-space: nowrap;
+}
+
 .comment-form {
     margin-top: 5px;
 }
@@ -45,6 +49,34 @@ td.tr {
 
 .center {
     text-align: center;
+}
+
+.speaker {
+    .name {
+        font-size: 1.5em;
+        color: #9B0008;
+        line-height: 1.5em;
+        }
+    .presentation {
+        font-size: 1.2em;
+        color: #9b0008;
+        line-height: 1.2em;
+    }
+    .bio { 
+        padding: 5px;
+    }
+    .photo {
+        float: left;
+        padding: 5px;
+        .caption {
+            text-align: center;
+        }
+        img {
+            border-radius: 8px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+        }
+    }
 }
 
 .sponsor {

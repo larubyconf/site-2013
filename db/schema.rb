@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230002322) do
+ActiveRecord::Schema.define(:version => 20130101223352) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -68,6 +68,13 @@ ActiveRecord::Schema.define(:version => 20121230002322) do
     t.datetime "updated_at",                        :null => false
   end
 
+  create_table "presenters", :force => true do |t|
+    t.integer  "proposal_id"
+    t.integer  "speaker_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "proposals", :force => true do |t|
     t.string   "title"
     t.text     "abstract"
@@ -94,6 +101,27 @@ ActiveRecord::Schema.define(:version => 20121230002322) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "speaker_urls", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.integer  "speaker_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "speakers", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "bio"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_file_updated_at"
+    t.string   "twitter_handle"
+  end
 
   create_table "sponsors", :force => true do |t|
     t.string   "name"

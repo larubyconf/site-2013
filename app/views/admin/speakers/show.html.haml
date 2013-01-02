@@ -1,0 +1,12 @@
+- content_for :admin_nav do
+  .row
+    .span12
+      = render :partial => 'admin/admin_navigation'
+.row
+  .span12
+    .well
+      .speaker
+        .name
+          = @speaker.full_name
+        .bio
+          = Haml::Engine.new(@speaker.bio).render

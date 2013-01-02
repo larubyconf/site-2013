@@ -6,6 +6,10 @@ class Proposal < ActiveRecord::Base
 
   has_many :votes, :dependent => :destroy
 
+  has_many :presenters, :dependent => :destroy
+
+  has_many :speakers, :through => :presenters
+  
   acts_as_commentable
   
   scope :accepted, where(:status => 'accepted')

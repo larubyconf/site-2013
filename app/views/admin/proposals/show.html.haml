@@ -9,7 +9,7 @@
         .title
           =@proposal.title
         .abstract
-          =@proposal.abstract
+          =Haml::Engine.new(@proposal.abstract).render
         .author
           = @proposal.user.email unless @proposal.user.nil?
         .audience
@@ -62,8 +62,8 @@
           = link_to("Confirm", confirm_admin_proposal_path(@proposal, :from => 'show'),   :method => :put)
         -else
           Confirm
-
-
+        %br
+          = link_to 'Edit', edit_admin_proposal_path(@proposal)
     .well
       .label
         Status

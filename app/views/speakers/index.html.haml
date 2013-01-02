@@ -12,3 +12,8 @@
           Speakers will be announced as they are confirmed, follow
           =link_to '@larubyconf', "http://twitter.com/larubyconf", :target => '_blank'
           on twitter for the latest announcements.
+.row
+  .span1
+    &nbsp;
+  .span10
+    = render :partial => 'speaker', :collection => @speakers

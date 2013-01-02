@@ -8,7 +8,7 @@
       = link_to 'View Schedule', schedule_path
     =link_to 'View all Proposals', proposals_path
 .row
-  .span12
+  .span8
     .well
       .proposal
         .actions.pull-right
@@ -44,3 +44,7 @@
           %br
           Last updated:
           = @proposal.updated_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")
+  .span4
+    .well
+      -if @proposal.presenters.count > 0
+        = render :partial => 'presenter', :collection => @proposal.presenters.map {|p| p.speaker}

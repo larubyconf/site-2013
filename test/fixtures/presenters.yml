@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  proposal_id: 1
+  speaker_id: 1
+
+two:
+  proposal_id: 1
+  speaker_id: 1
