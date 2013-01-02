@@ -3,3 +3,6 @@
     = display_start_time presentation
   %td
     = link_to_presentation presentation
+  %td
+    -if presentation.respond_to?(:presenters)
+      = raw(presentation.presenters.map { |presenter| link_to presenter.speaker.full_name, speaker_path(presenter.speaker) }.join(", "))

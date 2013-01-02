@@ -1,7 +1,7 @@
 .well
   .speaker
     .name
-      = speaker.full_name
+      = link_to speaker.full_name, speaker_path(speaker)
       \/
       = link_to(speaker.twitter_handle, "http://twitter.com/#{speaker.twitter_handle}", :target => "_blank") unless speaker.twitter_handle.nil?
     .presentation
