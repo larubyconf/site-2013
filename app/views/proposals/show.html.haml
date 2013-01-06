@@ -46,5 +46,4 @@
           = @proposal.updated_at.strftime("%B %d, %Y @ %H:%M:%S %P %Z")
   .span4
     .well
-      -if @proposal.presenters.count > 0
-        = render :partial => 'presenter', :collection => @proposal.presenters.map {|p| p.speaker}
+      = render :partial => 'presenter', :collection => @proposal.speakers

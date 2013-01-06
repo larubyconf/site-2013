@@ -4,13 +4,14 @@
       =@workshop.name
 .row
   .span12
-    =link_to 'View all Workshops', workshops_path
+    = link_to 'View Schedule', schedule_path
+    = link_to 'View all Workshops', workshops_path
 .row
-  .span12
+  .span8
     .well
       .proposal
         .actions.pull-right
-          - if current_user.admin?
+          - if current_user && current_user.admin?
             = link_to edit_admin_workshop_path(@workshop) do
               %i.icon-pencil
                 edit
@@ -19,3 +20,8 @@
                 delete
         .title
           =@workshop.name
+        .abstract
+          = Haml::Engine.new(@workshop.abstract).render
+  .span4
+    .well
+      = render :partial => 'proposals/presenter', :collection => @workshop.speakers

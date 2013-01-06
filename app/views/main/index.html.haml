@@ -3,6 +3,12 @@
     = render :partial => 'sponsors/sponsor_side_rail'
   .span6
     .well
+      %legend
+        Recent News & Announcements
+        =link_to "(all)", news_items_path
+      =render :partial => "news_item", :collection => @news_items
+
+    .well
       #myCarousel.carousel.slide
         .carousel-inner
           .active.item.hp-carousel
@@ -20,17 +26,13 @@
           <
         %a{:class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}
           >
-    .well
-      %legend
-        Recent News & Announcements
-        =link_to "(all)", news_items_path
-      =render :partial => "news_item", :collection => @news_items
   .span3
     .well
       %legend
         Registration
-      =link_to 'Register', new_user_registration_path
-      and we will email you when tickets go on sale.
+      Tickets are available now!
       %p
-        We decided this year not to open registration until we have our schedule published, we are looking forward to doing both by the 18th or 19th of December!
-
+        = link_to 'https://larubyconf.eventwax.com/los-angeles-ruby-conference-2013/register', :target => "_blank" do
+          .center
+            .btn.btn-danger
+              Purchase Ticket(s)

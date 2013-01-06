@@ -2,7 +2,7 @@
   .photo
     =image_tag presenter.photo.url(:medium)
     .caption
-      =presenter.full_name
+      =link_to presenter.full_name, speaker_path(presenter)
   .bio
-    =Haml::Engine.new(presenter.bio).render
+    =Haml::Engine.new(presenter.bio).render unless presenter.bio.nil?
 .clear

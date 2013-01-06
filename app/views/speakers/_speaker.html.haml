@@ -9,5 +9,5 @@
     .photo
       = image_tag speaker.photo.url(:medium)
     .bio
-      = Haml::Engine.new(speaker.bio).render
+      = Haml::Engine.new(speaker.bio).render unless speaker.bio.nil?
   .clear

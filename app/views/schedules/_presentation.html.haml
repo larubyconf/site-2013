@@ -4,5 +4,4 @@
   %td
     = link_to_presentation presentation
   %td
-    -if presentation.respond_to?(:presenters)
-      = raw(presentation.presenters.map { |presenter| link_to presenter.speaker.full_name, speaker_path(presenter.speaker) }.join(", "))
+    = raw(presentation.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))

@@ -1,10 +1,10 @@
 .well
   .workshop
     .name
-      =workshop.name
+      = link_to workshop.name, workshop_path(workshop)
     .presented
       =workshop.presented_at.strftime("%B %d, %Y @ %I:%M:%S %p %Z")
     .presenters
-      Presenter's name and links
+      = raw(workshop.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))
     .abstract
       =workshop.abstract
