@@ -2,7 +2,13 @@ class Speaker < ActiveRecord::Base
   attr_accessible :bio, :first_name, :last_name, :twitter_handle, :photo
 
   has_many :presentations, :class_name => 'Presenter'
-    
+
+  has_many :accepted_proposals, :class_name => 'Proposal', :through => :presentations, :conditions => {:status => "accepted"}, :source => :proposal
+  
+  has_many :instructors, :dependent => :destroy
+
+  has_many :workshops, :through => :instructors
+  
   has_attached_file :photo,
   :storage => :s3,
   :bucket => 'larubyconf',
