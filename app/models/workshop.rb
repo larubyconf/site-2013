@@ -1,5 +1,5 @@
 class Workshop < ActiveRecord::Base
-  attr_accessible :abstract, :name, :presented_at
+  attr_accessible :abstract, :name, :presented_at, :hidden
 
   has_many :instructors, :dependent => :destroy
 

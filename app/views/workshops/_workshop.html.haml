@@ -1,10 +1,14 @@
-.well
-  .workshop
-    .name
-      = link_to workshop.name, workshop_path(workshop)
-    .presented
-      =workshop.presented_at.strftime("%B %d, %Y @ %I:%M:%S %p %Z")
-    .presenters
-      = raw(workshop.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))
-    .abstract
-      =workshop.abstract
+- if !workshop.hidden || (current_user && current_user.admin?)
+  .well
+    .workshop
+      - if workshop.hidden
+        %h2.pull-right
+          Hidden
+      .name
+        = link_to workshop.name, workshop_path(workshop)
+      .presented
+        =workshop.presented_at.strftime("%B %d, %Y @ %I:%M:%S %p %Z")
+      .presenters
+        = raw(workshop.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))
+      .abstract
+        =workshop.abstract

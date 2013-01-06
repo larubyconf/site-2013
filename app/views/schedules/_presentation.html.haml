@@ -1,7 +1,10 @@
-%tr
-  %td
-    = display_start_time presentation
-  %td
-    = link_to_presentation presentation
-  %td
-    = raw(presentation.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))
+-if !presentation.hidden || (current_user && current_user.admin?)
+  %tr
+    %td
+      = display_start_time presentation
+    %td
+      = link_to_presentation presentation
+      - if presentation.hidden 
+        **
+    %td
+      = raw(presentation.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))
