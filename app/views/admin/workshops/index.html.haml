@@ -1,0 +1,22 @@
+-content_for :admin_nav do
+  .row
+    .span12
+      = render :partial => 'admin/admin_navigation'
+
+.row
+  .span12
+    .well
+      %table#workshops.table.table-striped
+        %thead
+          %tr
+            %th
+              Name
+            %th
+              Scheduled For
+            %th
+              Instructor(s)
+            %th
+              Actions
+        %tbody
+          = render :partial => 'workshop', :collection => @workshops
+      

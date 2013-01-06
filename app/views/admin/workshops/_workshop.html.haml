@@ -1,0 +1,14 @@
+%tr
+  %td
+    = link_to workshop.name, workshop_path(workshop)
+  %td
+    = workshop.presented_at.strftime("%A, %D")
+  %td
+    = workshop.speakers.map {|s| s.full_name}.join(", ")
+  %td
+    = link_to edit_admin_workshop_path(workshop) do
+      %i.icon-pencil
+        edit
+    = link_to admin_workshop_path(workshop), :method => :delete do
+      %i.icon-trash
+        delete
