@@ -11,4 +11,4 @@
       .presenters
         = raw(workshop.speakers.map { |speaker| link_to speaker.full_name, speaker_path(speaker) }.join(", "))
       .abstract
-        =row(workshop.abstract)
+        =raw(workshop.abstract)
