@@ -59,6 +59,6 @@ Larubyconf2013::Application.routes.draw do
   end
 
   match '/privacy' => 'main#privacy'
-  
+  match '/thank-you' => 'main#thank_you'
   root :to => 'main#index'
 end
