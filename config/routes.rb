@@ -50,11 +50,12 @@ Larubyconf2013::Application.routes.draw do
     resources :speakers
     resources :proposals do
       resources :comments
-      put 'accept', :on => :member
-      put 'reject', :on => :member
-      put 'consider', :on => :member
-      put 'clear', :on => :member
-      put 'confirm', :on => :member
+      put 'accept',   on: :member
+      put 'reject',   on: :member
+      put 'consider', on: :member
+      put 'clear',    on: :member
+      put 'confirm',  on: :member
+      put 'denied',   on: :member
     end
   end
 

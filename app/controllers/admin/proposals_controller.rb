@@ -11,6 +11,8 @@ class Admin::ProposalsController < ApplicationController
       @proposals = Proposal.considered
     when "review"
       @proposals = Proposal.to_review
+    when "denied"
+      @proposals = Proposal.denied
     else
       @proposals = Proposal.all
     end
@@ -55,6 +57,10 @@ class Admin::ProposalsController < ApplicationController
     change_status params[:id], 'confirmed'
   end
 
+  def denied
+    change_status params[:id], 'denied'
+  end
+  
   def change_status id, status
     @proposal = Proposal.find(params[:id])
 

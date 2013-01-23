@@ -18,9 +18,11 @@
   .span3
     .well
       .label
-        Rejected
+        Rejected / Denied
       .large-stat
         =Proposal.rejected.count
+        \/
+        =Proposal.denied.count
   .span3
     .well
       .label
@@ -38,6 +40,7 @@
       = link_to 'Considered', admin_proposals_path(:filter => 'considered')
       = link_to 'To Review',  admin_proposals_path(:filter => 'review')
       = link_to 'Confirmed',  admin_proposals_path(:filter => 'confirmed')
+      = link_to 'Denied',     admin_proposals_path(:filter => 'denied')
       %table#proposals.table.table-striped
         %thead
           %tr

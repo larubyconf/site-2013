@@ -18,6 +18,7 @@
       = link_to('Consider', consider_admin_proposal_path(proposal), :method => :put)
     - else
       Consider
+
     - unless proposal.status == "accepted"
       = link_to('Accept', accept_admin_proposal_path(proposal),     :method => :put)
     - else
@@ -26,11 +27,19 @@
       = link_to('Reject', reject_admin_proposal_path(proposal),     :method => :put)
     -else
       Reject
+
     - unless proposal.status.blank?
       = link_to('Clear', clear_admin_proposal_path(proposal),       :method => :put)
     -else
       Clear
+
     - unless proposal.status == "confirmed"
       = link_to("Confirm", confirm_admin_proposal_path(proposal),   :method => :put)
     -else
       Confirm
+
+    - unless proposal.status == "denied"
+      = link_to("Denied", denied_admin_proposal_path(proposal),     :method => :put)
+    - else
+      Denied
+      

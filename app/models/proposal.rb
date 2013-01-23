@@ -12,15 +12,17 @@ class Proposal < ActiveRecord::Base
   
   acts_as_commentable
   
-  scope :accepted, where(:status => 'accepted')
+  scope :accepted,   where(:status => 'accepted')
 
-  scope :rejected, where(:status => 'rejected')
+  scope :rejected,   where(:status => 'rejected')
 
   scope :considered, where(:status => 'considered')
 
-  scope :to_review, where("status is null or status = ''")
+  scope :to_review,  where("status is null or status = ''")
 
-  scope :confirmed, where(:status => 'confirmed')
+  scope :confirmed,  where(:status => 'confirmed')
+
+  scope :denied,     where(:status => 'denied')
   
   scope :most_votes,
   select("proposals.*, count(votes.id) as votes_count").
