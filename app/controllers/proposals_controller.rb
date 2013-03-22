@@ -32,7 +32,7 @@ class ProposalsController < ApplicationController
   def update
     @proposal = Proposal.find(params[:id])
 
-    unless @proposal.user == current_user
+    if current_user  && @proposal.user != current_user
       flash[:error] = "You can not edit a proposal that is not yours."
       redirect_to proposal_path(@proposal)
     end
@@ -67,13 +67,13 @@ class ProposalsController < ApplicationController
 
   def destroy
     @proposal = Proposal.find(params[:id])
-    unless @proposal.user == current_user
-      flash[:error] = "You can not delete a proposal that is not yours."
-      redirect_to proposal_path(@proposal)
-    else
+    if current_user &&  @proposal.user == current_user
       @proposal.destroy
       flash[:success] = "You deleted your proposal."
       redirect_to proposals_path
+    else
+      flash[:error] = "You can not delete a proposal that is not yours."
+      redirect_to proposal_path(@proposal)
     end
   end    
 end

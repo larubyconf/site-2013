@@ -1,4 +1,4 @@
-class Admin::ProposalsController < ApplicationController
+class Admin::ProposalsController < Admin::Controller
   def index
     case params[:filter]
     when "confirmed"

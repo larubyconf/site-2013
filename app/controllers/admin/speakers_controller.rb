@@ -1,4 +1,4 @@
-class Admin::SpeakersController < ApplicationController
+class Admin::SpeakersController < Admin::Controller
   def index
     @speakers = Speaker.order("last_name, first_name")
   end

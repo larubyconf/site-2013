@@ -1,4 +1,4 @@
-class Admin::CommentsController < ApplicationController
+class Admin::CommentsController < Admin::Controller
   respond_to :html, :xml, :json
   
   def create

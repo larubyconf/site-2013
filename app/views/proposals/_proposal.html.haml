@@ -1,12 +1,12 @@
 .well
   .proposal
     .actions.pull-right
-      -if proposal.user == current_user
-        =link_to edit_proposal_path(proposal) do
+      -if current_user && proposal.user == current_user
+        = link_to edit_proposal_path(proposal) do
           %i.icon-pencil 
             edit
         %br
-        =link_to proposal_path(proposal), :method => :delete do
+        = link_to proposal_path(proposal), :method => :delete do
           %i.icon-trash 
             delete
     .title
