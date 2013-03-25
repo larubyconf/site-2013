@@ -19,7 +19,7 @@
             = link_to admin_proposal_path(@proposal), :method => :delete do
               %i.icon-trash
                 delete
-          - elsif @proposal.user == current_user
+          - elsif current_user && @proposal.user == current_user
             = link_to edit_proposal_path(@proposal) do
               %i.icon-pencil 
                 edit
