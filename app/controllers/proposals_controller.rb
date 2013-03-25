@@ -32,7 +32,10 @@ class ProposalsController < ApplicationController
   def update
     @proposal = Proposal.find(params[:id])
 
-    if current_user.nil? || @proposal.user != current_user
+    if current_user.nil?
+      flash[:error] = "You must be logged in to update a proposal."
+      redirect_to proposal_path(@proposal)
+    elsif @proposal.user != current_user
       flash[:error] = "You can not edit a proposal that is not yours."
       redirect_to proposal_path(@proposal)
     end
