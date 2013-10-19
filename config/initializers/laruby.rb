@@ -1,0 +1,4 @@
+CONF_YEAR="2014"
+CONFERENCE_DATE = "February 8, 2014"
+WORKSHOP_DATES = "February 6 and 7"
+EARLY_BIRD_END_DATE = Time.parse("2013-12-31 23:59")
