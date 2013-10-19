@@ -8,6 +8,7 @@ gem "haml-rails"
 gem "sass"
 
 gem "mysql2"
+gem "dotenv"
 
 gem "capistrano"
 gem "capistrano-ext"
@@ -65,7 +66,7 @@ group :assets do
   gem 'less-rails'
   gem "twitter-bootstrap-rails"
   gem "bootstrap-datepicker-rails"
-  
+
   gem "jquery-datatables-rails", github: "rweng/jquery-datatables-rails"
   gem 'jquery-ui-rails'
 end

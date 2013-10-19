@@ -106,6 +106,7 @@ GEM
       warden (~> 1.2.1)
     devise-encryptable (0.1.1)
       devise (>= 2.1.0.rc)
+    dotenv (0.9.0)
     dwolla (0.0.15)
       faraday (= 0.7.6)
       multi_json (= 1.3.6)
@@ -337,6 +338,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   devise-encryptable
+  dotenv
   errplane
   execjs
   haml

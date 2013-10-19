@@ -45,3 +45,4 @@ production:
   password: <%= ENV['DB_PASSWORD']%>
   database: larc_2014_production
   host: localhost
+
