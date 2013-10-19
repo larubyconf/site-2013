@@ -7,7 +7,7 @@ gem "haml"
 gem "haml-rails"
 gem "sass"
 
-gem "pg"
+gem "mysql2"
 
 gem "capistrano"
 gem "capistrano-ext"
@@ -36,6 +36,7 @@ gem 'aws-sdk'
 gem "rails_admin"
 
 group :development, :test do
+  gem "sqlite3"
 
   gem "minitest-rails", git: "git://github.com/blowmage/minitest-rails.git"
   gem "minitest-rails-capybara"
