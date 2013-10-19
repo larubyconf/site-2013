@@ -6,7 +6,7 @@
       = render :partial => 'shared/twitter_follow_button', :locals => {:twitter => '@larubyconf' }
 
     .span4.center
-      &copy; TechConf, LLC 2009-2012
+      = raw("&copy; TechConf, LLC 2009-#{Time.now.strftime("%Y")}")
     .span4
       .pull-right
         %ul.nav.nav-pills
