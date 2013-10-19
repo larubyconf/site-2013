@@ -8,14 +8,31 @@
         =link_to "(all)", news_items_path
       =render :partial => "news_item", :collection => @news_items
 
+    .well
+      #myCarousel.carousel.slide
+        .carousel-inner
+          .active.item.hp-carousel
+            .announcement
+              %h3
+                Photos from the first 
+              %h2
+                LA Ruby Conf
+              %h3
+                held in 2009 at the
+              %h2
+                Marconi Automotive Museum!
+          = render :partial => 'item', :collection => @photos
+        %a{:class => "carousel-control left", :href => "#myCarousel", "data-slide" => "prev"}
+          <
+        %a{:class => "carousel-control right", :href => "#myCarousel", "data-slide" => "next"}
+          >
   .span3
     .well
       %legend
         Registration
-      Tickets will be available soon!
+      Tickets are available now!
       %p
-        -if false
-          = link_to 'https://larubyconf.eventwax.com/los-angeles-ruby-conference-2013/register', :target => "_blank" do
-            .center
-              .btn.btn-danger
-                Purchase Ticket(s)
+        = link_to 'https://larubyconf.eventwax.com/los-angeles-ruby-conference-2013/register', :target => "_blank" do
+          .center
+            .btn.btn-danger
+              Purchase Ticket(s)
