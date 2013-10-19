@@ -31,8 +31,8 @@ staging:
   encoding: utf8
   reconnect: false
   pool: 5
-  username: root
-  password: l4ruby
+  username: <%= ENV['DB_USERNAME']%>
+  password: <%= ENV['DB_PASSWORD']%>
   host: localhost
   database: larc_2014_staging
 
