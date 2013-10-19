@@ -8,7 +8,7 @@ development:
   encoding: unicode
   pool: 5
   username: <%= ENV['DB_USERNAME']%>
-  password: ENV['DB_PASSWORD']
+  password: <%= ENV['DB_PASSWORD']%>
   database: larc_2014_development
 
 # Warning: The database defined as "test" will be erased and
@@ -19,7 +19,7 @@ test:
   encoding: imocpde
   pool: 5
   username: <%= ENV['DB_USERNAME']%>
-  password: ENV['DB_PASSWORD']
+  password: <%= ENV['DB_PASSWORD']%>
   database: larc_2014_test
  
 staging:
@@ -27,7 +27,7 @@ staging:
   encoding: unicode
   pool: 5
   username: <%= ENV['DB_USERNAME']%>
-  password: ENV['DB_PASSWORD']
+  password: <%= ENV['DB_PASSWORD']%>
   database: larubyconf_2013_staging
 
 production:
@@ -35,5 +35,5 @@ production:
   encoding: unicode
   pool: 5
   username: <%a= ENV['DB_USERNAME']%>
-  password: ENV['DB_PASSWORD']
+  password: <%= ENV['DB_PASSWORD']%>
   database: larc_2014_production
