@@ -22,6 +22,7 @@ set :repository,  "git@github.com:larubyconf/site-2013.git"
 
 set :scm, :git
 ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
 
 set :keep_release, 5
 
