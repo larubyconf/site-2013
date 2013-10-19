@@ -7,7 +7,7 @@ gem "haml"
 gem "haml-rails"
 gem "sass"
 
-gem "mysql2"
+gem "pg"
 
 gem "capistrano"
 gem "capistrano-ext"
