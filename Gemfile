@@ -44,7 +44,7 @@ group :development, :test do
 
   gem "autotest-standalone", "~> 4.5.4"
   gem "autotest-rails-pure", "~> 4.1.2"
-  gem "autotest-fsevent"
+  gem "autotest-fsevent", "~> 0.2.9"
   gem "autotest-growl"
 
   gem "awesome_print"
