@@ -6,7 +6,7 @@
       = link_to(speaker.twitter_handle, "http://twitter.com/#{speaker.twitter_handle}", :target => "_blank") unless speaker.twitter_handle.nil?
     .presentation
       = raw(speaker.accepted_proposals.map {|p| p.presented_at.nil? ? "" : link_to("#{p.title} on #{p.presented_at.strftime("%A, %D")} in Tustin, CA", proposal_path(p))}.join("<br> "))
-
+      %br
       = raw(speaker.workshops.map {|w| link_to("#{w.name} on #{w.presented_at.strftime("%A, %D")} in Burbank, CA", workshop_path(w))}.join("<br>"))
     .photo
       = image_tag speaker.photo.url(:medium)
